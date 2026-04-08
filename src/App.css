@@ -340,30 +340,77 @@
   color: var(--uw-black);
 }
 
-.board-nav-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+.about-stats {
+  display: grid;
+  gap: 1rem;
 }
 
-.board-nav-label {
+.community-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.community-stats-column {
+  display: grid;
+  gap: 1rem;
+}
+
+.stat-card {
+  height: 100%;
+  padding: 1.4rem;
+  border: 1px solid var(--uw-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--uw-shadow);
+}
+
+.stat-value {
+  margin: 0;
+  color: var(--uw-red);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-label {
+  margin: 0.9rem 0 0.45rem;
+  color: var(--uw-black);
+  font-size: 1.08rem;
+}
+
+.stat-context {
   margin: 0;
   color: rgba(18, 18, 18, 0.64);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 0.92rem;
 }
 
-.board-year-link {
-  color: var(--uw-red);
-  font-size: 1.1rem;
-  font-weight: 700;
+.community-table-wrap {
+  padding: 1.25rem;
+  border: 1px solid var(--uw-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--uw-shadow);
 }
 
-.board-year-link:hover,
-.board-year-link.active {
+.community-source {
+  margin-bottom: 1rem;
+}
+
+.community-table {
+  margin-bottom: 0;
+}
+
+.community-table th {
   color: var(--uw-red-dark);
+  font-weight: 700;
+}
+
+.community-table td,
+.community-table th {
+  background: transparent;
+  vertical-align: middle;
 }
 
 .saved-event-card {
@@ -599,6 +646,10 @@
   .page-hero {
     padding: 1.6rem;
     border-radius: 22px;
+  }
+
+  .community-layout {
+    grid-template-columns: 1fr;
   }
 
   .home-hero-photo {
