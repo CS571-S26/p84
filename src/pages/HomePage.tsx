@@ -53,7 +53,7 @@ function HomePage() {
         </Row>
       </section>
 	<script src="https://elfsightcdn.com/platform.js" async></script>
-	<div class="elfsight-app-2e2ea4a1-8e3f-4680-9b96-6e9bb86fd82f" data-elfsight-app-lazy></div>
+	<div className="elfsight-app-2e2ea4a1-8e3f-4680-9b96-6e9bb86fd82f" data-elfsight-app-lazy></div>
     </div>
   )
 }
