@@ -81,6 +81,32 @@ const resources = {
         hostTitle: 'What We Host',
         hostBody:
           'Cultural programs, conversation tables, social mixers, and professional development opportunities.',
+        communityEyebrow: 'UW and Japan',
+        communityTitle: 'Japanese student community at UW-Madison',
+        communityDescription:
+          'Using enrollment data from the Office of the Registrar, this section shows a snapshot of students from Japan currently represented across the university.',
+        communityTotalLabel: 'Students from Japan',
+        communityTotalContext: 'Total across the enrollment rows below',
+        undergraduateLabel: 'Undergraduate students',
+        undergraduateContext: 'Freshman through senior levels',
+        graduateLabel: 'Graduate students',
+        graduateContext: 'Master’s and PhD levels',
+        sourceLabel: 'Source',
+        sourceValue:
+          'Office of the Registrar, University of Wisconsin-Madison (Enrollment Reports)',
+        academicLevels: {
+          freshman: 'Freshman',
+          sophomore: 'Sophomore',
+          junior: 'Junior',
+          senior: 'Senior',
+          masters: 'Masters',
+          phd: 'PhD',
+          specialStudent: 'Special students (exchange students, etc.)',
+        },
+        table: {
+          academicLevel: 'Academic Level / Program',
+          count: 'Students',
+        },
       },
       board: {
         eyebrow: 'Board',
@@ -282,6 +308,32 @@ const resources = {
         hostTitle: '主な活動',
         hostBody:
           '文化イベント、会話テーブル、交流会、キャリア支援イベントなどを企画しています。',
+        communityEyebrow: 'UW and Japan',
+        communityTitle: 'UW-Madison における日本人学生コミュニティ',
+        communityDescription:
+          '教務の在籍データをもとに、日本国籍の学生が大学内でどのように在籍しているかの一例をまとめています。',
+        communityTotalLabel: '日本国籍の学生数',
+        communityTotalContext: '下記の在籍区分を合計した人数',
+        undergraduateLabel: '学部生',
+        undergraduateContext: '1年生から4年生まで',
+        graduateLabel: '大学院生',
+        graduateContext: '修士課程・博士課程',
+        sourceLabel: '出典',
+        sourceValue:
+          'Office of the Registrar, University of Wisconsin-Madison（Enrollment Reports）',
+        academicLevels: {
+          freshman: '1年生',
+          sophomore: '2年生',
+          junior: '3年生',
+          senior: '4年生',
+          masters: '修士課程',
+          phd: '博士課程',
+          specialStudent: '特別生（交換留学生など）',
+        },
+        table: {
+          academicLevel: '学年・課程',
+          count: '人数',
+        },
       },
       board: {
         eyebrow: '役員紹介',
