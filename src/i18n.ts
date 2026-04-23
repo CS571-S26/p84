@@ -21,14 +21,15 @@ const resources = {
       common: {
         currentFocus: 'Current Focus',
         noSavedEvents: 'No saved events yet',
-        savedEventsPreview: 'Saved events preview',
-        savedSnapshot: 'Saved Snapshot',
+        savedEventsPreview: 'Saved events',
+        savedSnapshot: 'Your List',
         at: 'at',
       },
       categories: {
         cultural: 'Cultural',
         language: 'Language',
         professional: 'Professional',
+        community: 'Community',
       },
       roles: {
         president: 'President',
@@ -80,32 +81,6 @@ const resources = {
         hostTitle: 'What We Host',
         hostBody:
           'Cultural programs, conversation tables, social mixers, and professional development opportunities.',
-        communityEyebrow: 'UW and Japan',
-        communityTitle: 'Japanese student community at UW-Madison',
-        communityDescription:
-          'Using enrollment data from the Office of the Registrar, this section shows a snapshot of students from Japan currently represented across the university.',
-        communityTotalLabel: 'Students from Japan',
-        communityTotalContext: 'Total across the enrollment rows below',
-        undergraduateLabel: 'Undergraduate students',
-        undergraduateContext: 'Freshman through senior levels',
-        graduateLabel: 'Graduate students',
-        graduateContext: 'Master’s and PhD levels',
-        sourceLabel: 'Source',
-        sourceValue:
-          'Office of the Registrar, University of Wisconsin–Madison (Enrollment Reports)',
-        academicLevels: {
-          freshman: 'Freshman',
-          sophomore: 'Sophomore',
-          junior: 'Junior',
-          senior: 'Senior',
-          masters: 'Masters',
-          phd: 'PhD',
-          specialStudent: 'Special students (exchange students, etc.)',
-        },
-        table: {
-          academicLevel: 'Academic Level',
-          count: 'Count of Students',
-        },
       },
       board: {
         eyebrow: 'Board',
@@ -117,12 +92,19 @@ const resources = {
       },
       events: {
         eyebrow: 'Events',
-        title: 'A preview of JSA programming planned for the site.',
+        title: 'Find upcoming JSA events here.',
         description:
-          'This page is under construction...',
-        comingSoonTitle: 'Events page coming soon',
+          'Explore upcoming gatherings, cultural programs, and community events hosted by JSA. Search by keyword, save events for later, or add them directly to Google Calendar.',
+        comingSoonTitle: 'Events are being prepared',
         comingSoonBody:
-          'This page will be built out in a future milestone with event listings, filters, and more interactive features.',
+          'Event details will appear here as soon as they are added to the JSA calendar.',
+        loading: 'Loading events...',
+        configMissing:
+          'The Google Calendar API key has not been configured yet. Add VITE_GOOGLE_CALENDAR_API_KEY to enable live event loading.',
+        fetchError:
+          'Events could not be loaded from Google Calendar. Please check the calendar settings or try again later.',
+        emptyTitle: 'No events found',
+        emptyBody: 'Try changing the search term.',
         search: 'Search events',
         searchPlaceholder: 'Search by keyword',
         category: 'Category',
@@ -130,9 +112,10 @@ const resources = {
         savedCount_one: 'You currently have {{count}} saved event for later.',
         savedCount_other: 'You currently have {{count}} saved events for later.',
         noSavedBody:
-          'Use the save button above to build a personal event list for the milestone demo.',
+          'Use the save button above to keep track of events you want to revisit.',
         save: 'Save Event',
         saved: 'Saved',
+        removeSaved: 'Remove',
         addToCalendar: 'Add to Calendar',
       },
       faq: {
@@ -183,20 +166,39 @@ const resources = {
         eyebrow: 'Contact',
         title: 'Reach out with questions, collaboration ideas, or event interest.',
         description:
-          'The inquiry form is part of the proposal and gives the project a clear interactive element for the milestone demo.',
+          'Use this form to contact JSA about membership, events, collaboration, sponsorship, or general questions.',
         comingSoonTitle: 'Contact page coming soon',
         comingSoonBody:
           'This page will be implemented later with a contact form and additional communication details.',
-        success:
-          'Your message was submitted successfully. Form persistence and backend handling can be added in the next milestone.',
+        formTitle: 'Website Inquiry Form',
+        formFallback: 'If the custom form does not work, open the original Google Form in a new tab.',
+        openForm: 'Open Google Form',
+        successTitle: 'Thank you for reaching out.',
+        successBody: 'Your inquiry has been sent to the JSA Google Form.',
+        submitFrameTitle: 'Google Form submission frame',
         draft:
           'This form now keeps a local draft, so reloading the page does not immediately erase your progress.',
         name: 'Name',
         email: 'Email',
+        affiliation: 'Affiliation',
+        inquiryType: 'Inquiry Type',
+        subject: 'Subject',
         message: 'Message',
         placeholderName: 'Your name',
         placeholderEmail: 'name@wisc.edu',
+        placeholderAffiliation: 'UW-Madison student, organization, company, etc.',
+        placeholderSubject: 'What is this about?',
         placeholderMessage: 'How can JSA help?',
+        selectPlaceholder: 'Select one',
+        googleNotice:
+          'This custom form submits responses to Google Forms. Please do not include passwords or sensitive personal information.',
+        inquiryOptions: {
+          general: 'General Inquiry',
+          eventParticipation: 'Event Participation',
+          collaboration: 'Collaboration / Sponsorship',
+          membership: 'Membership',
+          other: 'Other',
+        },
         invalidName: 'Please enter your name.',
         invalidEmail: 'Please provide a valid email address.',
         invalidMessage: 'Please include a message.',
@@ -206,7 +208,7 @@ const resources = {
   },
   ja: {
     translation: {
-      siteTitle: 'Japanese Student Association at UW-Madison',
+      siteTitle: 'ウィスコンシン大学マディソン校 日本学生会',
       nav: {
         home: 'ホーム',
         about: '団体紹介',
@@ -223,14 +225,15 @@ const resources = {
       common: {
         currentFocus: '現在の重点',
         noSavedEvents: 'まだ保存されたイベントはありません',
-        savedEventsPreview: '保存したイベント一覧',
-        savedSnapshot: '保存状況',
+        savedEventsPreview: '保存したイベント',
+        savedSnapshot: 'マイリスト',
         at: '',
       },
       categories: {
         cultural: '文化',
         language: '言語',
         professional: 'キャリア',
+        community: 'コミュニティ',
       },
       roles: {
         president: '会長',
@@ -279,32 +282,6 @@ const resources = {
         hostTitle: '主な活動',
         hostBody:
           '文化イベント、会話テーブル、交流会、キャリア支援イベントなどを企画しています。',
-        communityEyebrow: 'UW and Japan',
-        communityTitle: 'UW–Madison における日本人学生コミュニティ',
-        communityDescription:
-          '教務の在籍データをもとに、日本国籍の学生が大学内でどのように在籍しているかの一例をまとめています。',
-        communityTotalLabel: '日本国籍の学生数',
-        communityTotalContext: '下記の在籍区分を合計した人数',
-        undergraduateLabel: '学部生',
-        undergraduateContext: '1年生から4年生まで',
-        graduateLabel: '大学院生',
-        graduateContext: '修士課程・博士課程',
-        sourceLabel: '出典',
-        sourceValue:
-          'Office of the Registrar, University of Wisconsin–Madison（Enrollment Reports）',
-        academicLevels: {
-          freshman: '1年生',
-          sophomore: '2年生',
-          junior: '3年生',
-          senior: '4年生',
-          masters: '修士',
-          phd: '博士',
-          specialStudent: '特別生（交換留学生など）',
-        },
-        table: {
-          academicLevel: '学年・課程',
-          count: '人数',
-        },
       },
       board: {
         eyebrow: '役員紹介',
@@ -316,21 +293,29 @@ const resources = {
       },
       events: {
         eyebrow: 'イベント',
-        title: 'JSA が企画するイベントのプレビューです。',
+        title: 'JSAのイベント情報',
         description:
-          'このページでは、絞り込み、キーワード検索、ローカルストレージによる保存、Google カレンダー追加を体験できます。',
-        comingSoonTitle: 'イベントページは準備中です',
+          'JSA が主催する交流イベント、文化プログラム、コミュニティ向けイベントを確認できます。キーワード検索、保存、Google カレンダーへの追加にも対応しています。',
+        comingSoonTitle: 'イベント情報を準備中です',
         comingSoonBody:
-          'このページは今後のマイルストーンで実装予定です。イベント一覧や絞り込みなどの機能を追加していきます。',
+          'JSA のカレンダーにイベントが追加され次第、こちらに表示されます。',
+        loading: 'イベントを読み込んでいます...',
+        configMissing:
+          'Google Calendar API キーがまだ設定されていません。ライブイベントを読み込むには VITE_GOOGLE_CALENDAR_API_KEY を追加してください。',
+        fetchError:
+          'Google Calendar からイベントを読み込めませんでした。カレンダー設定を確認するか、後でもう一度お試しください。',
+        emptyTitle: '該当するイベントがありません',
+        emptyBody: '検索キーワードを変更してみてください。',
         search: 'イベント検索',
         searchPlaceholder: 'キーワードで検索',
         category: 'カテゴリ',
         all: 'すべて',
         savedCount_one: '保存済みイベントが {{count}} 件あります。',
         savedCount_other: '保存済みイベントが {{count}} 件あります。',
-        noSavedBody: '上の保存ボタンを使って、自分用のイベント一覧を作れます。',
+        noSavedBody: '気になるイベントは保存して、あとから簡単に確認できます。',
         save: 'イベントを保存',
         saved: '保存済み',
+        removeSaved: '削除',
         addToCalendar: 'カレンダーに追加',
       },
       faq: {
@@ -381,20 +366,39 @@ const resources = {
         eyebrow: 'お問い合わせ',
         title: '質問やコラボ提案、イベント参加の相談はこちらから。',
         description:
-          '問い合わせフォームは Proposal にあるインタラクティブ要素の一つとして実装しています。',
+          '入会、イベント、コラボレーション、スポンサーシップ、その他のご質問はこちらのフォームからお問い合わせください。',
         comingSoonTitle: 'お問い合わせページは準備中です',
         comingSoonBody:
           'このページは今後実装予定です。お問い合わせフォームや連絡先情報を追加していきます。',
-        success:
-          '送信が完了しました。次のマイルストーンではフォーム永続化やバックエンド連携も追加できます。',
+        formTitle: 'お問い合わせフォーム',
+        formFallback: '自作フォームがうまく動かない場合は、元の Google Form を新しいタブで開いてください。',
+        openForm: 'Google Form を開く',
+        successTitle: 'お問い合わせありがとうございます。',
+        successBody: 'JSA の Google Form に送信されました。',
+        submitFrameTitle: 'Google Form 送信用フレーム',
         draft:
           'このフォームはローカルに下書きを保存するため、リロードしても入力内容が消えにくくなっています。',
         name: '名前',
         email: 'メールアドレス',
+        affiliation: '所属',
+        inquiryType: 'お問い合わせ種別',
+        subject: '件名',
         message: 'メッセージ',
         placeholderName: 'お名前',
         placeholderEmail: 'name@wisc.edu',
+        placeholderAffiliation: 'UW-Madison 学生、団体名、企業名など',
+        placeholderSubject: 'お問い合わせの件名',
         placeholderMessage: 'どのようなご相談ですか？',
+        selectPlaceholder: '選択してください',
+        googleNotice:
+          'この自作フォームは Google Form に回答を送信します。パスワードや機密性の高い個人情報は入力しないでください。',
+        inquiryOptions: {
+          general: '一般的な質問',
+          eventParticipation: 'イベント参加',
+          collaboration: '企業・団体連携 / スポンサーシップ',
+          membership: '入会について',
+          other: 'その他',
+        },
         invalidName: '名前を入力してください。',
         invalidEmail: '有効なメールアドレスを入力してください。',
         invalidMessage: 'メッセージを入力してください。',

@@ -6,12 +6,12 @@ import type { EventItem } from '../data/events'
 type EventCardProps = {
   event: EventItem
   isSaved: boolean
-  onToggleSave: (title: string) => void
+  onToggleSave: (eventId: string) => void
 }
 
 function EventCard({ event, isSaved, onToggleSave }: EventCardProps) {
   const { t } = useTranslation()
-  const categoryKey = event.category.toLowerCase()
+  const eventId = event.id ?? event.title
 
   return (
     <Card className="event-list-card">
@@ -19,8 +19,7 @@ function EventCard({ event, isSaved, onToggleSave }: EventCardProps) {
         <div className="d-flex flex-column flex-lg-row justify-content-between gap-3">
           <div className="flex-grow-1">
             <div className="d-flex flex-wrap gap-2 align-items-center">
-              <span className="pill-label">{t(`categories.${categoryKey}`)}</span>
-              <span className="event-location">{event.location}</span>
+              {event.location ? <span className="event-location">{event.location}</span> : null}
             </div>
             <Card.Title className="mt-3">{event.title}</Card.Title>
             <Card.Text className="mb-2">{event.description}</Card.Text>
@@ -29,11 +28,17 @@ function EventCard({ event, isSaved, onToggleSave }: EventCardProps) {
             <div className="event-date">{event.date}</div>
             <Button
               variant={isSaved ? 'danger' : 'outline-danger'}
-              onClick={() => onToggleSave(event.title)}
+              onClick={() => onToggleSave(eventId)}
             >
               {isSaved ? t('events.saved') : t('events.save')}
             </Button>
-            <Button variant="outline-dark" as="a" href={event.calendarUrl} target="_blank">
+            <Button
+              variant="outline-dark"
+              as="a"
+              href={event.calendarUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               {t('events.addToCalendar')}
             </Button>
           </div>

@@ -1,6 +1,6 @@
 export type EventItem = {
+  id?: string
   title: string
-  category: string
   date: string
   location: string
   description: string
@@ -10,7 +10,6 @@ export type EventItem = {
 export const featuredEvents: EventItem[] = [
   {
     title: 'Hanami Picnic at the Lakeshore',
-    category: 'Cultural',
     date: 'April 20',
     location: 'Lakeshore Path',
     description: 'Celebrate spring with food, games, and a relaxed outdoor gathering.',
@@ -19,7 +18,6 @@ export const featuredEvents: EventItem[] = [
   },
   {
     title: 'Japanese Conversation Table',
-    category: 'Language',
     date: 'April 24',
     location: 'Memorial Union',
     description: 'Practice Japanese in small groups with native speakers and learners.',
@@ -28,7 +26,6 @@ export const featuredEvents: EventItem[] = [
   },
   {
     title: 'Career Night with Alumni',
-    category: 'Professional',
     date: 'May 2',
     location: 'Engineering Hall',
     description: 'Hear from alumni about internships, job search strategies, and networking.',
@@ -37,7 +34,6 @@ export const featuredEvents: EventItem[] = [
   },
   {
     title: 'Japanese Film Screening',
-    category: 'Cultural',
     date: 'May 8',
     location: 'Van Hise Hall',
     description: 'Watch a contemporary Japanese film and join a discussion afterwards.',
@@ -46,7 +42,6 @@ export const featuredEvents: EventItem[] = [
   },
   {
     title: 'Resume Review Sprint',
-    category: 'Professional',
     date: 'May 12',
     location: 'College Library',
     description: 'Get quick resume feedback from peers and alumni before internship season.',
