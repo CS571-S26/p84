@@ -1,6 +1,3 @@
-const defaultCalendarId =
-  '6396dbb89e4daa013547307a45c841a651b8f5c6f11a842b803feeec16e0cd67@group.calendar.google.com'
-
 type EnvMap = Record<string, string | undefined>
 
 const processEnv: EnvMap =
@@ -22,6 +19,6 @@ const readEnv = (key: string) => {
 }
 
 export const appConfig = {
-  googleCalendarId: readEnv('VITE_GOOGLE_CALENDAR_ID') ?? defaultCalendarId,
+  googleCalendarId: readEnv('VITE_GOOGLE_CALENDAR_ID'),
   googleCalendarApiKey: readEnv('VITE_GOOGLE_CALENDAR_API_KEY'),
 } as const

@@ -13,11 +13,12 @@ import { fetchGoogleCalendarEvents } from '../utils/googleCalendar'
 const savedEventsKey = 'jsa-saved-events'
 const calendarId = appConfig.googleCalendarId
 const calendarApiKey = appConfig.googleCalendarApiKey
+const hasCalendarConfig = Boolean(calendarId && calendarApiKey)
 
 function EventsPage() {
   const { i18n, t } = useTranslation()
   const [events, setEvents] = useState<EventItem[]>([])
-  const [isLoading, setIsLoading] = useState(Boolean(calendarApiKey))
+  const [isLoading, setIsLoading] = useState(hasCalendarConfig)
   const [error, setError] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
   const [savedIds, setSavedIds] = useState<string[]>(() => {
@@ -40,11 +41,13 @@ function EventsPage() {
   }, [savedIds])
 
   useEffect(() => {
-    if (!calendarApiKey) {
+    if (!hasCalendarConfig) {
       setIsLoading(false)
       setError(t('events.configMissing'))
       return
     }
+    const configuredCalendarId = calendarId as string
+    const configuredCalendarApiKey = calendarApiKey as string
 
     const abortController = new AbortController()
 
@@ -54,8 +57,8 @@ function EventsPage() {
         setError('')
         setEvents(
           await fetchGoogleCalendarEvents({
-            apiKey: calendarApiKey,
-            calendarId,
+            apiKey: configuredCalendarApiKey,
+            calendarId: configuredCalendarId,
             locale: i18n.resolvedLanguage ?? 'en',
             signal: abortController.signal,
           }),
@@ -75,7 +78,7 @@ function EventsPage() {
     void loadEvents()
 
     return () => abortController.abort()
-  }, [i18n.resolvedLanguage, t])
+  }, [hasCalendarConfig, i18n.resolvedLanguage, t])
 
   const normalizedSearch = searchTerm.trim().toLowerCase()
   const filteredEvents = events.filter((event) => {
