@@ -9,6 +9,7 @@ const resources = {
         home: 'Home',
         about: 'About',
         events: 'Events',
+        exchange: 'Study Abroad',
         board: 'Board',
         faq: 'FAQ',
         careers: 'Careers',
@@ -144,6 +145,37 @@ const resources = {
         removeSaved: 'Remove',
         addToCalendar: 'Add to Calendar',
       },
+      exchange: {
+        eyebrow: 'Exchange & Study Abroad',
+        title: 'A page for exchange students and students considering study abroad.',
+        description:
+          'This section is meant to help incoming exchange students, visiting students, and UW-Madison students exploring study abroad opportunities connected to Japan.',
+        beforeArrivalTitle: 'Before You Arrive',
+        beforeArrivalBody:
+          'Start by checking housing, course planning, visa timelines, and what kind of support network you want once you get to Madison.',
+        firstWeeksTitle: 'Your First Weeks in Madison',
+        firstWeeksBody:
+          'The first few weeks can feel overwhelming, so this page helps point students toward community, events, and a softer landing on campus.',
+        communityTitle: 'Finding Community Through JSA',
+        communityBody:
+          'JSA can be one place to meet Japanese students, exchange students, returnees, and students interested in Japan through relaxed social and cultural events.',
+        campusLifeTitle: 'Campus and Daily Life',
+        campusLifeBody:
+          'Students often need practical guidance about where to go, how to meet people, and how to build routines both on campus and in Madison.',
+        languageTitle: 'Language and Cultural Exchange',
+        languageBody:
+          'This site can also support people who want to practice Japanese, share their own background, or join conversations across language levels.',
+        supportTitle: 'Questions and Support',
+        supportBody:
+          'If you are unsure where to start, the best next step is to look through upcoming events, read the FAQ, or reach out through the contact form.',
+        nextStepsEyebrow: 'Next Steps',
+        nextStepsTitle: 'Where to go from here',
+        nextStepsBody:
+          'Use the rest of the site to explore events, read common questions, and contact JSA if you want a more direct connection.',
+        ctaEvents: 'Browse Events',
+        ctaFaq: 'Read FAQ',
+        ctaContact: 'Contact JSA',
+      },
       faq: {
         eyebrow: 'FAQ',
         title: 'Common questions from new and prospective members.',
@@ -239,6 +271,7 @@ const resources = {
         home: 'ホーム',
         about: '団体紹介',
         events: 'イベント',
+        exchange: '留学案内',
         board: '役員紹介',
         faq: 'FAQ',
         careers: 'キャリア',
@@ -370,6 +403,37 @@ const resources = {
         removeSaved: '削除',
         addToCalendar: 'カレンダーに追加',
       },
+      exchange: {
+        eyebrow: '交換留学・留学案内',
+        title: '交換留学生や留学を考えている人のためのページです。',
+        description:
+          'このページは、これから UW-Madison に来る交換留学生や、将来の留学を考えている学生に向けて、JSA やキャンパスでのつながり方を紹介するためのものです。',
+        beforeArrivalTitle: '渡航前に考えたいこと',
+        beforeArrivalBody:
+          '住居、履修、ビザの準備に加えて、到着後にどんなコミュニティとつながりたいかを考えておくと安心です。',
+        firstWeeksTitle: 'マディソンでの最初の数週間',
+        firstWeeksBody:
+          '到着直後は生活面も人間関係も一気に変わるので、イベントやコミュニティの存在が大きな支えになります。',
+        communityTitle: 'JSA を通じたつながり',
+        communityBody:
+          'JSA は、日本人学生、交換留学生、帰国生、日本に関心のある学生がゆるやかにつながれる場のひとつです。',
+        campusLifeTitle: 'キャンパス生活と日常',
+        campusLifeBody:
+          '大学生活では、どこで人と出会うか、どこに相談するか、どう生活リズムを作るかがとても重要です。',
+        languageTitle: '言語交流と文化交流',
+        languageBody:
+          '日本語を使いたい人、英語に慣れたい人、自分の文化を共有したい人にも、このサイトや JSA の活動は入り口になります。',
+        supportTitle: '相談したいときは',
+        supportBody:
+          '何から始めればよいか分からない場合は、イベント一覧、FAQ、お問い合わせフォームを見るのがおすすめです。',
+        nextStepsEyebrow: '次の一歩',
+        nextStepsTitle: '他のページも活用してください',
+        nextStepsBody:
+          'イベントを確認したり、よくある質問を読んだり、必要に応じて JSA に直接連絡したりできます。',
+        ctaEvents: 'イベントを見る',
+        ctaFaq: 'FAQを見る',
+        ctaContact: 'JSAに連絡する',
+      },
       faq: {
         eyebrow: 'FAQ',
         title: 'よくある質問',
@@ -423,7 +487,7 @@ const resources = {
         comingSoonBody:
           'このページは今後実装予定です。お問い合わせフォームや連絡先情報を追加していきます。',
         formTitle: 'お問い合わせフォーム',
-        formFallback: '自作フォームがうまく動かない場合は、元の Google Form を新しいタブで開いてください。',
+        formFallback: '上記のフォームがうまく動かない場合は、元の Google Form を新しいタブで開いてください。',
         openForm: 'Google Form を開く',
         successTitle: 'お問い合わせありがとうございます。',
         successBody: 'JSA の Google Form に送信されました。',
@@ -443,7 +507,7 @@ const resources = {
         placeholderMessage: 'どのようなご相談ですか？',
         selectPlaceholder: '選択してください',
         googleNotice:
-          'この自作フォームは Google Form に回答を送信します。パスワードや機密性の高い個人情報は入力しないでください。',
+          'このフォームは Google Form を通じて回答を送信します。パスワードや機密性の高い個人情報は入力しないでください。',
         inquiryOptions: {
           general: '一般的な質問',
           eventParticipation: 'イベント参加',

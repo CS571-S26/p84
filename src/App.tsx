@@ -5,6 +5,7 @@ import BoardPage from './pages/BoardPage'
 import BoardYearPage from './pages/BoardYearPage'
 import CareersPage from './pages/CareersPage'
 import ContactPage from './pages/ContactPage'
+import ExchangePage from './pages/ExchangePage'
 import EventsPage from './pages/EventsPage'
 import FaqPage from './pages/FaqPage'
 import HomePage from './pages/HomePage'
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="events" element={<EventsPage />} />
+          <Route path="exchange" element={<ExchangePage />} />
           <Route path="board" element={<BoardPage />}>
             <Route path="2025-2026" element={<BoardYearPage />} />
           </Route>

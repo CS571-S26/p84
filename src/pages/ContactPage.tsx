@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import { useTranslation } from 'react-i18next'
@@ -16,9 +16,56 @@ const inquiryOptions = [
   { value: 'Other（その他）', labelKey: 'other' },
 ] as const
 
+const contactDraftKey = 'jsa-contact-draft'
+
+type ContactDraft = {
+  name: string
+  email: string
+  affiliation: string
+  inquiryType: string
+  subject: string
+  message: string
+}
+
+const emptyDraft: ContactDraft = {
+  name: '',
+  email: '',
+  affiliation: '',
+  inquiryType: '',
+  subject: '',
+  message: '',
+}
+
 function ContactPage() {
   const { t } = useTranslation()
   const [hasSubmitted, setHasSubmitted] = useState(false)
+  const [formValues, setFormValues] = useState<ContactDraft>(() => {
+    const savedDraft = window.localStorage.getItem(contactDraftKey)
+
+    if (!savedDraft) {
+      return emptyDraft
+    }
+
+    try {
+      return { ...emptyDraft, ...(JSON.parse(savedDraft) as Partial<ContactDraft>) }
+    } catch {
+      window.localStorage.removeItem(contactDraftKey)
+      return emptyDraft
+    }
+  })
+
+  useEffect(() => {
+    window.localStorage.setItem(contactDraftKey, JSON.stringify(formValues))
+  }, [formValues])
+
+  const handleFieldChange =
+    (field: keyof ContactDraft) =>
+    (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+      setFormValues((currentValues) => ({
+        ...currentValues,
+        [field]: event.target.value,
+      }))
+    }
 
   return (
     <div className="d-grid gap-4">
@@ -35,12 +82,20 @@ function ContactPage() {
         </Alert>
       ) : null}
 
+      <Alert variant="light" className="contact-draft-alert">
+        {t('contact.draft')}
+      </Alert>
+
       <form
         className="custom-contact-form"
         action={contactFormAction}
         method="post"
         target="contact-form-submit-frame"
-        onSubmit={() => setHasSubmitted(true)}
+        onSubmit={() => {
+          setHasSubmitted(true)
+          window.localStorage.removeItem(contactDraftKey)
+          setFormValues(emptyDraft)
+        }}
       >
         <div className="contact-form-grid">
           <div className="contact-field">
@@ -50,6 +105,8 @@ function ContactPage() {
               type="text"
               name="entry.1884252496"
               placeholder={t('contact.placeholderName')}
+              value={formValues.name}
+              onChange={handleFieldChange('name')}
               required
             />
           </div>
@@ -61,6 +118,8 @@ function ContactPage() {
               type="email"
               name="entry.1014913984"
               placeholder={t('contact.placeholderEmail')}
+              value={formValues.email}
+              onChange={handleFieldChange('email')}
               required
             />
           </div>
@@ -72,12 +131,20 @@ function ContactPage() {
               type="text"
               name="entry.1500648834"
               placeholder={t('contact.placeholderAffiliation')}
+              value={formValues.affiliation}
+              onChange={handleFieldChange('affiliation')}
             />
           </div>
 
           <div className="contact-field">
             <label htmlFor="contact-inquiry-type">{t('contact.inquiryType')}</label>
-            <select id="contact-inquiry-type" name="entry.515563274" required>
+            <select
+              id="contact-inquiry-type"
+              name="entry.515563274"
+              value={formValues.inquiryType}
+              onChange={handleFieldChange('inquiryType')}
+              required
+            >
               <option value="">{t('contact.selectPlaceholder')}</option>
               {inquiryOptions.map((option) => (
                 <option value={option.value} key={option.value}>
@@ -94,6 +161,8 @@ function ContactPage() {
               type="text"
               name="entry.169347121"
               placeholder={t('contact.placeholderSubject')}
+              value={formValues.subject}
+              onChange={handleFieldChange('subject')}
               required
             />
           </div>
@@ -105,6 +174,8 @@ function ContactPage() {
               name="entry.494316112"
               placeholder={t('contact.placeholderMessage')}
               rows={6}
+              value={formValues.message}
+              onChange={handleFieldChange('message')}
               required
             />
           </div>

@@ -8,6 +8,7 @@ function SiteFooter() {
     { to: '/', label: t('nav.home') },
     { to: '/about', label: t('nav.about') },
     { to: '/events', label: t('nav.events') },
+    { to: '/exchange', label: t('nav.exchange') },
     { to: '/board', label: t('nav.board') },
     { to: '/faq', label: t('nav.faq') },
     { to: '/careers', label: t('nav.careers') },

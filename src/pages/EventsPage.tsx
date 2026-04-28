@@ -4,21 +4,15 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import { useTranslation } from 'react-i18next'
+import { appConfig } from '../config/appConfig'
 import EventCard from '../components/EventCard'
 import EventFilterBar from '../components/EventFilterBar'
 import type { EventItem } from '../data/events'
 import { fetchGoogleCalendarEvents } from '../utils/googleCalendar'
 
 const savedEventsKey = 'jsa-saved-events'
-const defaultCalendarId =
-  '6396dbb89e4daa013547307a45c841a651b8f5c6f11a842b803feeec16e0cd67@group.calendar.google.com'
-const getEnvValue = (value: string | undefined) => {
-  const trimmedValue = value?.trim()
-
-  return trimmedValue && trimmedValue.length > 0 ? trimmedValue : undefined
-}
-const calendarId = getEnvValue(import.meta.env.VITE_GOOGLE_CALENDAR_ID) ?? defaultCalendarId
-const calendarApiKey = getEnvValue(import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY)
+const calendarId = appConfig.googleCalendarId
+const calendarApiKey = appConfig.googleCalendarApiKey
 
 function EventsPage() {
   const { i18n, t } = useTranslation()
@@ -153,14 +147,27 @@ function EventsPage() {
                   <div>
                     <h3>{event.title}</h3>
                     <p>{event.date}</p>
+                    {event.location ? <p>{event.location}</p> : null}
                   </div>
-                  <Button
-                    variant="outline-danger"
-                    size="sm"
-                    onClick={() => handleToggleSave(event.id ?? event.title)}
-                  >
-                    {t('events.removeSaved')}
-                  </Button>
+                  <div className="saved-event-actions">
+                    <Button
+                      variant="outline-dark"
+                      size="sm"
+                      as="a"
+                      href={event.calendarUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {t('events.addToCalendar')}
+                    </Button>
+                    <Button
+                      variant="outline-danger"
+                      size="sm"
+                      onClick={() => handleToggleSave(event.id ?? event.title)}
+                    >
+                      {t('events.removeSaved')}
+                    </Button>
+                  </div>
                 </div>
               </Col>
             ))

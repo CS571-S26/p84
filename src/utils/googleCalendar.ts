@@ -46,6 +46,7 @@ const getEventDate = (date?: GoogleCalendarDate) => {
 
 const formatEventDate = (date: Date, isAllDay: boolean, locale: string) =>
   new Intl.DateTimeFormat(locale, {
+    weekday: 'short',
     month: 'short',
     day: 'numeric',
     ...(isAllDay
