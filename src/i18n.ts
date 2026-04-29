@@ -158,6 +158,51 @@ const resources = {
         title: 'A page for exchange students and students considering study abroad.',
         description:
           'This section is meant to help incoming exchange students, visiting students, and UW-Madison students exploring study abroad opportunities connected to Japan.',
+        considering: {
+          eyebrow: 'Considering UW-Madison',
+          heroHeadline:
+            'Study in a top U.S. public university and build a real support network.',
+          heroImagePlaceholder:
+            '<Image placeholder: wide campus view of UW-Madison by the lake at sunset>',
+          whyTitle: 'Why UW-Madison',
+          whyBody:
+            'UW-Madison is a strong choice if you want both academic quality and a realistic student life. You get globally recognized programs, active research opportunities, and a large campus community where international students can find peers quickly.',
+          quickFactsTitle: 'Quick Facts',
+          quickFact1:
+            'Ranked around #36 overall and #12 among U.S. public universities (U.S. News, 2026 ranking release).',
+          quickFact2:
+            'Computer Science is ranked around top 10 among U.S. public universities (#9 in the latest UW/CDIS ranking update).',
+          quickFact3:
+            'These rankings matter because they usually reflect research strength, faculty quality, and employer reputation, which affect your classes, projects, and internship access.',
+          quickFact4:
+            'Large university scale means many course choices, student organizations, and campus resources, but you should expect to plan early for popular classes.',
+          academicsTitle: 'Academics',
+          academicsBody:
+            'Strong options include Computer Science, Engineering, and Business, with opportunities to join labs, design teams, and career-focused events. Be realistic: some gateway courses are challenging, and intro classes can be large. If you use office hours, study groups, and advising early, it is manageable and worth it.',
+          studentLifeTitle: 'Student Life',
+          studentLifeBody:
+            'Housing costs vary by location and style, but many students budget roughly $800-$1,500/month for rent. Groceries and meals are manageable with planning, and campus food choices are broad. Winter is real in Madison: snow, wind, and below-freezing days are normal, so a proper coat, boots, and layering are essential for daily life.',
+          studentLifeImagePlaceholder:
+            '<Image placeholder: students walking between classes in winter jackets on snowy campus paths>',
+          whyJsaTitle: 'Why JSA',
+          whyJsaBody:
+            'JSA helps exchange and international students find people quickly, ask practical questions, and feel less isolated in the first months. From events to everyday advice, you are not expected to figure everything out alone.',
+          communityImagePlaceholder:
+            '<Image placeholder: JSA community event with students talking and sharing food>',
+          voicesTitle: 'Student Voices',
+          voice1:
+            '"My first semester was hard academically, but joining a student group made Madison feel smaller and friendlier."',
+          voice2:
+            '"Winter surprised me, but once I bought proper gear, campus life became much easier."',
+          voice3:
+            '"The classes are demanding, but I gained practical skills and better confidence in English discussion."',
+          ctaEyebrow: 'Next Step',
+          ctaTitle: 'If this feels like your direction, start preparing early.',
+          ctaBody:
+            'Compare your course goals, budget, and climate preferences now, then move to "Preparing for UW-Madison" to build your checklist.',
+          ctaTip:
+            'Decision tip: UW-Madison is a great fit for students who want strong academics and are ready for a large, active campus environment.',
+        },
         subnavConsidering: 'Considering UW-Madison',
         subnavPreparing: 'Preparing for UW-Madison',
         subnavArriving: 'Arriving in Madison',
@@ -456,6 +501,50 @@ const resources = {
         title: '交換留学生や留学を考えている人のためのページです。',
         description:
           'このページは、これから UW-Madison に来る交換留学生や、将来の留学を考えている学生に向けて、JSA やキャンパスでのつながり方を紹介するためのものです。',
+        considering: {
+          eyebrow: 'UW-Madisonを検討中',
+          heroHeadline: '米国トップクラスの州立大学で学び、安心できるコミュニティにつながる。',
+          heroImagePlaceholder:
+            '<Image placeholder: 湖沿いから見た夕方のUW-Madisonキャンパス全景>',
+          whyTitle: 'Why UW-Madison',
+          whyBody:
+            'UW-Madison は、学問の質と現実的な学生生活の両方を重視したい人に向いています。評価の高い学部、研究機会、そして大きな学生コミュニティがあり、留学生でも早い段階でつながりを作りやすい環境です。',
+          quickFactsTitle: 'Quick Facts',
+          quickFact1:
+            'U.S. News の2026年版では、全米総合で約36位、公立大学で約12位に位置づけられています。',
+          quickFact2:
+            'Computer Science は、公立大学の中でトップ10前後（UW/CDIS の最新更新で9位）です。',
+          quickFact3:
+            'こうした順位は、研究力・教員の質・就職面での評価を反映しやすく、授業やプロジェクト、インターン機会に直結しやすい点が重要です。',
+          quickFact4:
+            '大規模大学なので、授業選択や学生団体、支援制度は豊富です。一方で人気科目は早めの計画が必要です。',
+          academicsTitle: 'Academics',
+          academicsBody:
+            'Computer Science、Engineering、Business などは特に強く、研究室参加、チーム活動、キャリア系イベントの機会があります。現実的には、基礎科目は難易度が高く、導入科目は大人数になりがちです。オフィスアワーや学習グループ、アドバイジングを早めに使うことで十分対応できます。',
+          studentLifeTitle: 'Student Life',
+          studentLifeBody:
+            '住居費は場所と住み方で変わりますが、家賃は月 $800-$1,500 程度で見積もる学生が多いです。食費は計画次第で調整しやすく、学内外の選択肢も豊富です。マディソンの冬は本格的で、雪・強風・氷点下の日が続くため、防寒着・ブーツ・重ね着は必須です。',
+          studentLifeImagePlaceholder:
+            '<Image placeholder: 雪のキャンパスを防寒して移動する学生の様子>',
+          whyJsaTitle: 'Why JSA',
+          whyJsaBody:
+            'JSA は、交換留学生・留学生が早く人とつながり、実務的な相談をしやすくし、最初の数か月の孤立感を減らすためのコミュニティです。イベント参加から日常の相談まで、一人で抱え込まなくてよい環境を作れます。',
+          communityImagePlaceholder:
+            '<Image placeholder: JSAイベントで交流する学生コミュニティの様子>',
+          voicesTitle: 'Student Voices',
+          voice1:
+            '「最初の学期は学業が大変でしたが、学生団体に入ってからマディソンでの生活がぐっと身近になりました。」',
+          voice2:
+            '「冬は想像以上でしたが、防寒をそろえたら生活はかなり楽になりました。」',
+          voice3:
+            '「授業は厳しいですが、実践的な力と英語で議論する自信がつきました。」',
+          ctaEyebrow: 'Next Step',
+          ctaTitle: '方向性が合いそうなら、早めに準備を始めましょう。',
+          ctaBody:
+            '履修目標、予算、気候への適性を整理したうえで、次は「UW-Madison 渡航準備」ページで具体的なチェック項目を確認してください。',
+          ctaTip:
+            '判断の目安: 学業重視で、活発な大規模キャンパス環境に前向きなら、UW-Madison は現実的に良い選択肢です。',
+        },
         subnavConsidering: 'UW-Madisonを検討中',
         subnavPreparing: 'UW-Madison 渡航準備',
         subnavArriving: 'マディソン到着後',
