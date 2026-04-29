@@ -20,11 +20,9 @@ const resources = {
         ja: 'JA',
       },
       common: {
-        currentFocus: 'Current Focus',
         noSavedEvents: 'No saved events yet',
         savedEventsPreview: 'Saved events',
         savedSnapshot: 'Your List',
-        at: 'at',
       },
       categories: {
         career: 'Career',
@@ -33,9 +31,6 @@ const resources = {
         external: 'External',
       },
       roles: {
-        president: 'President',
-        vicePresident: 'Vice President',
-        eventsChair: 'Events Chair',
         coPresident: 'Co-President',
         coPresidentFinance: 'Co-President & Finance Officer',
         socialMediaCoordinator: 'Social Media Coordinator',
@@ -67,9 +62,6 @@ const resources = {
         careerTitle: 'Career Support',
         careerBody:
           'Share opportunities, alumni connections, and professional events tailored to international and domestic students.',
-        featuredEyebrow: 'Featured Progress',
-        featuredTitle: 'Upcoming events already staged on the site',
-        viewAll: 'View All Events',
       },
       about: {
         eyebrow: 'About JSA',
@@ -122,9 +114,6 @@ const resources = {
         title: 'Find upcoming JSA events here.',
         description:
           'Explore upcoming gatherings, cultural programs, and community events hosted by JSA. Search by keyword, save events for later, or add them directly to Google Calendar.',
-        comingSoonTitle: 'Events are being prepared',
-        comingSoonBody:
-          'Event details will appear here as soon as they are added to the JSA calendar.',
         loading: 'Loading events...',
         configMissing:
           'Calendar configuration is incomplete. Add VITE_GOOGLE_CALENDAR_API_KEY and category calendar IDs (VITE_GOOGLE_CALENDAR_ID_CAREER, VITE_GOOGLE_CALENDAR_ID_COMMUNITY_CULTURE, VITE_GOOGLE_CALENDAR_ID_COLLABORATIONS, VITE_GOOGLE_CALENDAR_ID_EXTERNAL).',
@@ -162,8 +151,6 @@ const resources = {
           eyebrow: 'Considering UW-Madison',
           heroHeadline:
             'Study in a top U.S. public university and build a real support network.',
-          heroImagePlaceholder:
-            '<Image placeholder: wide campus view of UW-Madison by the lake at sunset>',
           whyTitle: 'Why UW-Madison',
           whyBody:
             'UW-Madison is a strong choice if you want both academic quality and a realistic student life. You get globally recognized programs, active research opportunities, and a large campus community where international students can find peers quickly.',
@@ -182,8 +169,6 @@ const resources = {
             'Top public school standing in national rankings (U.S. News, 2026).',
           quickFact2:
             'Computer Science is ranked around top 10 among U.S. public universities (#9 in the latest UW/CDIS ranking update).',
-          quickFact3:
-            'These rankings matter because they usually reflect research strength, faculty quality, and employer reputation, which affect your classes, projects, and internship access.',
           quickFact4:
             'Large university scale means many course choices, student organizations, and campus resources, but you should expect to plan early for popular classes.',
           quickFact5:
@@ -194,13 +179,9 @@ const resources = {
           studentLifeTitle: 'Student Life',
           studentLifeBody:
             'Housing costs vary by location and style, but many students budget roughly $800-$1,500/month for rent. Groceries and meals are manageable with planning, and campus food choices are broad. Winter is real in Madison: snow, wind, and below-freezing days are normal, so a proper coat, boots, and layering are essential for daily life.',
-          studentLifeImagePlaceholder:
-            '<Image placeholder: students walking between classes in winter jackets on snowy campus paths>',
           whyJsaTitle: 'Why JSA',
           whyJsaBody:
             'JSA helps exchange and international students find people quickly, ask practical questions, and feel less isolated in the first months. From events to everyday advice, you are not expected to figure everything out alone.',
-          communityImagePlaceholder:
-            '<Image placeholder: JSA community event with students talking and sharing food>',
           voicesTitle: 'Student Voices',
           voice1:
             '"My first semester was hard academically, but joining a student group made Madison feel smaller and friendlier."',
@@ -246,47 +227,10 @@ const resources = {
         resourcesTitle: 'Current Students / Resources',
         resourcesDescription:
           'Use these pages and channels to find events, common answers, career opportunities, and direct support from JSA.',
-        uwEyebrow: 'Destination Spotlight',
-        uwTitle: 'Why choose UW-Madison for study abroad?',
-        uwDescription:
-          'UW-Madison combines strong academics, a vibrant campus community, and practical support systems that help international and exchange students thrive.',
-        uwAcademicsTitle: 'Top-tier academics across many fields',
-        uwAcademicsBody:
-          'Students can access highly ranked programs, flexible course options, and opportunities to learn from faculty with global research backgrounds.',
-        uwCampusTitle: 'Welcoming student life and traditions',
-        uwCampusBody:
-          'From student organizations and events to the lakeside campus culture, UW-Madison offers many ways to build friendships and feel part of the community quickly.',
-        uwSupportTitle: 'Reliable support for international students',
-        uwSupportBody:
-          'Advising, language support, and peer communities make it easier to adjust to classes, daily life, and long-term planning while abroad.',
-        uwLocationTitle: 'A balanced college city experience',
-        uwLocationBody:
-          'Madison is known for safety, walkability, and quality of life, giving students both an active campus environment and a comfortable place to live.',
-        beforeArrivalTitle: 'Before You Arrive',
         beforeArrivalBody:
           'Start by checking housing, course planning, visa timelines, and what kind of support network you want once you get to Madison.',
-        firstWeeksTitle: 'Your First Weeks in Madison',
-        firstWeeksBody:
-          'The first few weeks can feel overwhelming, so this page helps point students toward community, events, and a softer landing on campus.',
-        communityTitle: 'Finding Community Through JSA',
-        communityBody:
-          'JSA can be one place to meet Japanese students, exchange students, returnees, and students interested in Japan through relaxed social and cultural events.',
-        campusLifeTitle: 'Campus and Daily Life',
-        campusLifeBody:
-          'Students often need practical guidance about where to go, how to meet people, and how to build routines both on campus and in Madison.',
-        languageTitle: 'Language and Cultural Exchange',
-        languageBody:
-          'This site can also support people who want to practice Japanese, share their own background, or join conversations across language levels.',
-        supportTitle: 'Questions and Support',
         supportBody:
           'If you are unsure where to start, the best next step is to look through upcoming events, read the FAQ, or reach out through the contact form.',
-        nextStepsEyebrow: 'Next Steps',
-        nextStepsTitle: 'Where to go from here',
-        nextStepsBody:
-          'Use the rest of the site to explore events, read common questions, and contact JSA if you want a more direct connection.',
-        ctaEvents: 'Browse Events',
-        ctaFaq: 'Read FAQ',
-        ctaContact: 'Contact JSA',
       },
       faq: {
         eyebrow: 'FAQ',
@@ -337,10 +281,6 @@ const resources = {
         title: 'Reach out with questions, collaboration ideas, or event interest.',
         description:
           'Use this form to contact JSA about membership, events, collaboration, sponsorship, or general questions.',
-        comingSoonTitle: 'Contact page coming soon',
-        comingSoonBody:
-          'This page will be implemented later with a contact form and additional communication details.',
-        formTitle: 'Website Inquiry Form',
         formFallback: 'If the custom form does not work, open the original Google Form in a new tab.',
         openForm: 'Open Google Form',
         successTitle: 'Thank you for reaching out.',
@@ -369,9 +309,6 @@ const resources = {
           membership: 'Membership',
           other: 'Other',
         },
-        invalidName: 'Please enter your name.',
-        invalidEmail: 'Please provide a valid email address.',
-        invalidMessage: 'Please include a message.',
         submit: 'Send Inquiry',
       },
     },
@@ -394,11 +331,9 @@ const resources = {
         ja: 'JA',
       },
       common: {
-        currentFocus: '現在の重点',
         noSavedEvents: 'まだ保存されたイベントはありません',
         savedEventsPreview: '保存したイベント',
         savedSnapshot: 'マイリスト',
-        at: '',
       },
       categories: {
         career: 'キャリア',
@@ -407,9 +342,6 @@ const resources = {
         external: '外部',
       },
       roles: {
-        president: '会長',
-        vicePresident: '副会長',
-        eventsChair: 'イベント担当',
         coPresident: '共同会長',
         coPresidentFinance: '共同会長・会計担当',
         socialMediaCoordinator: 'ソーシャルメディア担当',
@@ -438,9 +370,6 @@ const resources = {
         languageBody: '日本語会話の練習機会を作り、学習者が自信を持てる環境を目指します。',
         careerTitle: 'キャリア支援',
         careerBody: '卒業生とのつながりやキャリア機会を、留学生と現地学生の双方へ共有します。',
-        featuredEyebrow: '進捗ハイライト',
-        featuredTitle: '現在サイト上で確認できるイベント',
-        viewAll: 'すべてのイベント',
       },
       about: {
         eyebrow: '団体紹介',
@@ -493,9 +422,6 @@ const resources = {
         title: 'JSAのイベント情報',
         description:
           'JSA が主催する交流イベント、文化プログラム、コミュニティ向けイベントを確認できます。キーワード検索、保存、Google カレンダーへの追加にも対応しています。',
-        comingSoonTitle: 'イベント情報を準備中です',
-        comingSoonBody:
-          'JSA のカレンダーにイベントが追加され次第、こちらに表示されます。',
         loading: 'イベントを読み込んでいます...',
         configMissing:
           'カレンダー設定が不足しています。VITE_GOOGLE_CALENDAR_API_KEY とカテゴリ別カレンダーID（VITE_GOOGLE_CALENDAR_ID_CAREER / VITE_GOOGLE_CALENDAR_ID_COMMUNITY_CULTURE / VITE_GOOGLE_CALENDAR_ID_COLLABORATIONS / VITE_GOOGLE_CALENDAR_ID_EXTERNAL）を設定してください。',
@@ -531,8 +457,6 @@ const resources = {
         considering: {
           eyebrow: 'UW-Madisonを検討中',
           heroHeadline: '米国トップクラスの州立大学で学び、安心できるコミュニティにつながる。',
-          heroImagePlaceholder:
-            '<Image placeholder: 湖沿いから見た夕方のUW-Madisonキャンパス全景>',
           whyTitle: 'Why UW-Madison',
           whyBody:
             'UW-Madison は、学問の質と現実的な学生生活の両方を重視したい人に向いています。評価の高い学部、研究機会、そして大きな学生コミュニティがあり、留学生でも早い段階でつながりを作りやすい環境です。',
@@ -551,8 +475,6 @@ const resources = {
             '全米公立大学の上位校として安定した評価を得ています（U.S. News 2026）。',
           quickFact2:
             'Computer Science は、公立大学の中でトップ10前後（UW/CDIS の最新更新で9位）です。',
-          quickFact3:
-            'こうした順位は、研究力・教員の質・就職面での評価を反映しやすく、授業やプロジェクト、インターン機会に直結しやすい点が重要です。',
           quickFact4:
             '大規模大学なので、授業選択や学生団体、支援制度は豊富です。一方で人気科目は早めの計画が必要です。',
           quickFact5:
@@ -563,13 +485,9 @@ const resources = {
           studentLifeTitle: 'Student Life',
           studentLifeBody:
             '住居費は場所と住み方で変わりますが、家賃は月 $800-$1,500 程度で見積もる学生が多いです。食費は計画次第で調整しやすく、学内外の選択肢も豊富です。マディソンの冬は本格的で、雪・強風・氷点下の日が続くため、防寒着・ブーツ・重ね着は必須です。',
-          studentLifeImagePlaceholder:
-            '<Image placeholder: 雪のキャンパスを防寒して移動する学生の様子>',
           whyJsaTitle: 'Why JSA',
           whyJsaBody:
             'JSA は、交換留学生・留学生が早く人とつながり、実務的な相談をしやすくし、最初の数か月の孤立感を減らすためのコミュニティです。イベント参加から日常の相談まで、一人で抱え込まなくてよい環境を作れます。',
-          communityImagePlaceholder:
-            '<Image placeholder: JSAイベントで交流する学生コミュニティの様子>',
           voicesTitle: 'Student Voices',
           voice1:
             '「最初の学期は学業が大変でしたが、学生団体に入ってからマディソンでの生活がぐっと身近になりました。」',
@@ -615,47 +533,10 @@ const resources = {
         resourcesTitle: '在学生向け / リソース',
         resourcesDescription:
           'イベント情報、FAQ、キャリア情報、お問い合わせを活用して、必要な支援へすぐにアクセスできます。',
-        uwEyebrow: '留学先の魅力',
-        uwTitle: '留学先としての UW-Madison の魅力',
-        uwDescription:
-          'UW-Madison は、高い教育水準、活気あるキャンパス文化、そして留学生向けの支援体制がそろった、安心して学べる留学先です。',
-        uwAcademicsTitle: '幅広い分野で高水準の学び',
-        uwAcademicsBody:
-          '評価の高い学部・大学院プログラムがそろっており、関心に合わせた柔軟な履修が可能です。',
-        uwCampusTitle: '参加しやすい学生コミュニティ',
-        uwCampusBody:
-          '学生団体やイベントが豊富で、到着後の早い段階から友人や居場所を作りやすい環境です。',
-        uwSupportTitle: '留学生向けサポートが充実',
-        uwSupportBody:
-          'アドバイジングや言語面の支援、学生コミュニティが、学業と生活の立ち上げをしっかり支えます。',
-        uwLocationTitle: '暮らしやすい大学都市マディソン',
-        uwLocationBody:
-          '安全性や生活のしやすさに定評があり、学業と日常生活のバランスを取りやすい都市です。',
-        beforeArrivalTitle: '渡航前に考えたいこと',
         beforeArrivalBody:
           '住居、履修、ビザの準備に加えて、到着後にどんなコミュニティとつながりたいかを考えておくと安心です。',
-        firstWeeksTitle: 'マディソンでの最初の数週間',
-        firstWeeksBody:
-          '到着直後は生活面も人間関係も一気に変わるので、イベントやコミュニティの存在が大きな支えになります。',
-        communityTitle: 'JSA を通じたつながり',
-        communityBody:
-          'JSA は、日本人学生、交換留学生、帰国生、日本に関心のある学生がゆるやかにつながれる場のひとつです。',
-        campusLifeTitle: 'キャンパス生活と日常',
-        campusLifeBody:
-          '大学生活では、どこで人と出会うか、どこに相談するか、どう生活リズムを作るかがとても重要です。',
-        languageTitle: '言語交流と文化交流',
-        languageBody:
-          '日本語を使いたい人、英語に慣れたい人、自分の文化を共有したい人にも、このサイトや JSA の活動は入り口になります。',
-        supportTitle: '相談したいときは',
         supportBody:
           '何から始めればよいか分からない場合は、イベント一覧、FAQ、お問い合わせフォームを見るのがおすすめです。',
-        nextStepsEyebrow: '次の一歩',
-        nextStepsTitle: '他のページも活用してください',
-        nextStepsBody:
-          'イベントを確認したり、よくある質問を読んだり、必要に応じて JSA に直接連絡したりできます。',
-        ctaEvents: 'イベントを見る',
-        ctaFaq: 'FAQを見る',
-        ctaContact: 'JSAに連絡する',
       },
       faq: {
         eyebrow: 'FAQ',
@@ -706,10 +587,6 @@ const resources = {
         title: '質問やコラボ提案、イベント参加の相談はこちらから。',
         description:
           '入会、イベント、コラボレーション、スポンサーシップ、その他のご質問はこちらのフォームからお問い合わせください。',
-        comingSoonTitle: 'お問い合わせページは準備中です',
-        comingSoonBody:
-          'このページは今後実装予定です。お問い合わせフォームや連絡先情報を追加していきます。',
-        formTitle: 'お問い合わせフォーム',
         formFallback: '上記のフォームがうまく動かない場合は、元の Google Form を新しいタブで開いてください。',
         openForm: 'Google Form を開く',
         successTitle: 'お問い合わせありがとうございます。',
@@ -738,9 +615,6 @@ const resources = {
           membership: '入会について',
           other: 'その他',
         },
-        invalidName: '名前を入力してください。',
-        invalidEmail: '有効なメールアドレスを入力してください。',
-        invalidMessage: 'メッセージを入力してください。',
         submit: '送信する',
       },
     },
