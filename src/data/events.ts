@@ -1,7 +1,11 @@
+import type { EventCategory } from '../config/appConfig'
+
 export type EventItem = {
   id?: string
+  category: EventCategory
   title: string
   date: string
+  startsAt?: string
   location: string
   description: string
   calendarUrl: string
@@ -9,6 +13,7 @@ export type EventItem = {
 
 export const featuredEvents: EventItem[] = [
   {
+    category: 'communityCulture',
     title: 'Hanami Picnic at the Lakeshore',
     date: 'April 20',
     location: 'Lakeshore Path',
@@ -17,6 +22,7 @@ export const featuredEvents: EventItem[] = [
       'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hanami+Picnic+at+the+Lakeshore',
   },
   {
+    category: 'communityCulture',
     title: 'Japanese Conversation Table',
     date: 'April 24',
     location: 'Memorial Union',
@@ -25,6 +31,7 @@ export const featuredEvents: EventItem[] = [
       'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Japanese+Conversation+Table',
   },
   {
+    category: 'career',
     title: 'Career Night with Alumni',
     date: 'May 2',
     location: 'Engineering Hall',
@@ -33,6 +40,7 @@ export const featuredEvents: EventItem[] = [
       'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Career+Night+with+Alumni',
   },
   {
+    category: 'communityCulture',
     title: 'Japanese Film Screening',
     date: 'May 8',
     location: 'Van Hise Hall',
@@ -41,6 +49,7 @@ export const featuredEvents: EventItem[] = [
       'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Japanese+Film+Screening',
   },
   {
+    category: 'career',
     title: 'Resume Review Sprint',
     date: 'May 12',
     location: 'College Library',

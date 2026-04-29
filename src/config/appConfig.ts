@@ -1,4 +1,5 @@
 type EnvMap = Record<string, string | undefined>
+export type EventCategory = 'career' | 'communityCulture' | 'collaborations' | 'external'
 
 const processEnv: EnvMap =
   (globalThis as { process?: { env?: EnvMap } }).process?.env ?? {}
@@ -18,7 +19,19 @@ const readEnv = (key: string) => {
   return undefined
 }
 
+export const eventCategories: EventCategory[] = [
+  'career',
+  'communityCulture',
+  'collaborations',
+  'external',
+]
+
 export const appConfig = {
-  googleCalendarId: readEnv('VITE_GOOGLE_CALENDAR_ID'),
   googleCalendarApiKey: readEnv('VITE_GOOGLE_CALENDAR_API_KEY'),
+  googleCalendarIds: {
+    career: readEnv('VITE_GOOGLE_CALENDAR_ID_CAREER'),
+    communityCulture: readEnv('VITE_GOOGLE_CALENDAR_ID_COMMUNITY_CULTURE'),
+    collaborations: readEnv('VITE_GOOGLE_CALENDAR_ID_COLLABORATIONS'),
+    external: readEnv('VITE_GOOGLE_CALENDAR_ID_EXTERNAL'),
+  } as Record<EventCategory, string | undefined>,
 } as const
