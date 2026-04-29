@@ -1039,6 +1039,38 @@
   box-shadow: 0 0 0 0.25rem rgba(197, 5, 12, 0.14);
 }
 
+@media (max-width: 992px) {
+  .considering-hero-overlay {
+    position: static;
+    inset: auto;
+    max-width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72) 78%);
+  }
+
+  .considering-hero-title {
+    font-size: clamp(1.8rem, 6.4vw, 3rem);
+    line-height: 1.08;
+  }
+
+  .exchange-subpage-hero {
+    height: auto;
+  }
+
+  .exchange-subpage-hero-image {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .exchange-subpage-hero-overlay {
+    position: static;
+    inset: auto;
+    max-width: 100%;
+    padding: 1rem 1.1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.74));
+  }
+}
+
 @media (max-width: 768px) {
   .site-navbar,
   .navbar-shell {
@@ -1153,11 +1185,7 @@
   }
 
   .considering-hero-overlay {
-    position: static;
-    inset: auto;
-    max-width: 100%;
     padding: 1.1rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72) 78%);
   }
 
   .considering-why-layout,
@@ -1179,14 +1207,8 @@
     border-top: 0;
   }
 
-  .exchange-subpage-hero {
-    height: 220px;
-  }
-
   .exchange-subpage-hero-overlay {
-    max-width: 100%;
     padding: 1rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.74));
   }
 
   .exchange-resources-grid {
