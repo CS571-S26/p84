@@ -82,7 +82,7 @@ function AboutPage() {
           </div>
           <div className="community-table-wrap">
             <div className="community-source">
-              <p className="board-nav-label">{t('about.sourceLabel')}</p>
+              <h3 className="board-nav-label">{t('about.sourceLabel')}</h3>
               <p className="stat-context">{t('about.sourceValue')}</p>
             </div>
             <Table responsive className="community-table">
