@@ -68,6 +68,17 @@ const resources = {
         title: 'A student organization centered on belonging and exchange through Japan.',
         description:
           'The site introduces what JSA offers to Japanese students, language learners, and anyone hoping to engage with Japanese culture at UW-Madison.',
+        storyTitle: 'JSA at UW-Madison',
+        storyP1:
+          'The Japanese Student Association (JSA) at UW-Madison was founded in 2014. While the number of Japanese students on campus is relatively small, UW-Madison has one of the largest Japanese language programs in the Midwest, with around 400 Japanese language learners. JSA strengthens the Japanese community while also creating a meaningful learning space for students studying Japanese. We also work with the Japanese program to support language education and collaborate closely with the local Japanese community in Madison.',
+        storyP2:
+          'UW-Madison also has a long and deep relationship with Japan. Over the years, many Japanese students have graduated from UW, and the university has maintained active research partnerships, study abroad programs, and international internship participation connected to Japan. UW-Madison also has exchange agreements with universities such as Waseda, Keio, and Kyoto University, giving students broad global learning opportunities.',
+        storyP3:
+          'JSA is open to undergraduate, graduate, and professional students, and we provide activities that welcome students from all backgrounds. Through monthly events and cultural exchange programs, members deepen their understanding of Japanese culture while building community. New members join every year, and the organization continues to grow with strong momentum.',
+        storyP4:
+          'Our activities include shared Japanese meals, karaoke, movie nights, and discussion-based events. We value creating spaces where participants can enjoy learning from each other in a relaxed and friendly environment.',
+        storyP5:
+          'JSA aims to be a place where students can learn about Japanese culture while building both academic and social connections. UW-Madison also offers many Japan-related opportunities, including the JR Central internship program and networking events with UW alumni living in Japan. For details on events and current activities, please visit our Events and Contact pages. We look forward to welcoming you.',
         missionTitle: 'Mission',
         missionBody:
           'Support students through events that make campus feel smaller, warmer, and more connected.',
@@ -376,6 +387,17 @@ const resources = {
         title: '日本を通じたつながりを大切にする学生団体です。',
         description:
           'JSAの組織について紹介します。',
+        storyTitle: 'UW-Madison 日本学生会（JSA）について',
+        storyP1:
+          'ウィスコンシン大学マディソン校・日本学生会（JSA）は2014年に設立されました。当大学には日本人学生は少ないものの、中西部最大規模の日本語学部があり、約400人の日本語学習者が在籍しています。JSAは、日本人コミュニティの強化とともに、日本語を学ぶ学生に貴重な学びの場を提供しており、私たちは日本語学部と連携して日本語教育の充実を図っています。また、マディソンの日本人コミュニティとも密接に協力し、地域の日本文化の発展や日本人コミュニティの活性化にも取り組んでいます。',
+        storyP2:
+          'さらに、UW–Madisonは日本との深い関係を持ち、長年にわたり多くの日本人学生が卒業し、研究パートナーシップや留学プログラム、国際インターンシップにも強い参加を見せています。また、早稲田大学、慶應大学、京都大学などとの交換留学協定も結んでおり、学生に多くの国際的な学びの機会を提供しています。',
+        storyP3:
+          'JSAは学部生、大学院生、専門職の学生を対象にした団体で、バックグラウンドに関係なく、すべての学生が参加できる活動を提供しています。月例のイベントや文化交流活動を通じて、日本文化の理解を深め、メンバー同士の交流の場を広げています。毎年、多くの新しいメンバーが参加し、団体はますます活発に成長しています。',
+        storyP4:
+          '日本食の共有、カラオケ、映画鑑賞、ディスカッションイベントなど、多岐にわたる活動を行っており、参加者同士が楽しく学び合う機会を提供しています。',
+        storyP5:
+          'JSAは、学生たちが日本文化を学びながら、学術的および社会的なつながりを築く場として機能することを目標にしています。また、UW–Madisonには日本とのさまざまな研究や文化交流の機会が豊富にあります。例えば、JR東海とのインターンシッププログラムや、日本に住むUW卒業生とのネットワーキングイベントも行われており、学生たちは日本に関する知識を深め、将来に役立つ貴重な経験を得ています。詳細なイベント情報や活動内容については、私たちのイベントページや連絡先を通じてご確認いただけます。みなさんのご参加をお待ちしています。',
         missionTitle: 'ミッション',
         missionBody:
           'イベントや交流を通じて、学生がより身近で温かいコミュニティを感じられるよう支えます。',

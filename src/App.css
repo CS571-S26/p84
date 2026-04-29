@@ -367,6 +367,20 @@
   gap: 1rem;
 }
 
+.about-story {
+  padding: 1.35rem;
+  border: 1px solid var(--uw-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--uw-shadow);
+  display: grid;
+  gap: 0.95rem;
+}
+
+.about-story .saved-heading {
+  margin-bottom: 0.2rem;
+}
+
 .community-layout {
   display: grid;
   grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);

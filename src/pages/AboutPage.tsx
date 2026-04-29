@@ -40,6 +40,16 @@ function AboutPage() {
         <h1 className="section-title">{t('about.title')}</h1>
         <p className="section-description">{t('about.description')}</p>
       </div>
+
+      <section className="about-story">
+        <h2 className="saved-heading">{t('about.storyTitle')}</h2>
+        <p className="section-description">{t('about.storyP1')}</p>
+        <p className="section-description">{t('about.storyP2')}</p>
+        <p className="section-description">{t('about.storyP3')}</p>
+        <p className="section-description">{t('about.storyP4')}</p>
+        <p className="section-description">{t('about.storyP5')}</p>
+      </section>
+
       <Row className="g-4">
         <Col md={6}>
           <SectionCard
