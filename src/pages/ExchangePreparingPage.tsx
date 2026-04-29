@@ -9,12 +9,24 @@ function ExchangePreparingPage() {
 
   const cards = [
     {
-      title: t('exchange.beforeArrivalTitle'),
-      body: t('exchange.beforeArrivalBody'),
+      title: t('exchange.preparingHousingTitle'),
+      body: t('exchange.preparingHousingBody'),
     },
     {
-      title: t('exchange.supportTitle'),
-      body: t('exchange.supportBody'),
+      title: t('exchange.preparingCoursesTitle'),
+      body: t('exchange.preparingCoursesBody'),
+    },
+    {
+      title: t('exchange.preparingVisaTitle'),
+      body: t('exchange.preparingVisaBody'),
+    },
+    {
+      title: t('exchange.preparingFinanceTitle'),
+      body: t('exchange.preparingFinanceBody'),
+    },
+    {
+      title: t('exchange.preparingEssentialsTitle'),
+      body: t('exchange.preparingEssentialsBody'),
     },
   ]
 
@@ -36,7 +48,7 @@ function ExchangePreparingPage() {
 
       <Row className="g-4">
         {cards.map((card) => (
-          <Col md={6} key={card.title}>
+          <Col md={6} lg={4} key={card.title}>
             <div className="exchange-subpage-card">
               <SectionCard title={card.title} body={card.body} />
             </div>

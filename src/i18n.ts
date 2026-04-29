@@ -223,6 +223,21 @@ const resources = {
         preparingTitle: 'Preparing for UW-Madison',
         preparingDescription:
           'Plan the essentials early, including housing, academics, visa timing, and the support networks you will use after arrival.',
+        preparingHousingTitle: 'Housing',
+        preparingHousingBody:
+          'Start housing research early. Compare on-campus options and off-campus leases, and check move-in dates, contract terms, and commuting time before you decide.',
+        preparingCoursesTitle: 'Courses',
+        preparingCoursesBody:
+          'Draft a realistic course plan with your home university requirements in mind. Some high-demand classes fill quickly, so prepare alternatives before registration opens.',
+        preparingVisaTitle: 'Visa',
+        preparingVisaBody:
+          'Track visa timelines carefully from DS-2019/I-20 issuance through interview scheduling and entry deadlines. Keep digital and printed copies of key documents.',
+        preparingFinanceTitle: 'Finance',
+        preparingFinanceBody:
+          'Build a monthly budget for rent, food, transport, books, and winter gear. Confirm how you will handle banking, card fees, and emergency expenses in the U.S.',
+        preparingEssentialsTitle: 'Essentials',
+        preparingEssentialsBody:
+          'Prepare practical basics: health insurance confirmation, medication refills, weather-appropriate clothing, SIM plan, and important campus contacts for your first month.',
         arrivingEyebrow: 'First Weeks On Campus',
         arrivingTitle: 'Arriving in Madison',
         arrivingDescription:
@@ -577,6 +592,21 @@ const resources = {
         preparingTitle: 'UW-Madison 渡航準備',
         preparingDescription:
           '住居、履修、ビザ、到着後の支援先など、早めに準備すべき内容を整理しておくと安心です。',
+        preparingHousingTitle: 'Housing',
+        preparingHousingBody:
+          '住居探しは早めに始めるのがおすすめです。学内寮と学外物件を比較し、入居日、契約条件、通学時間まで確認してから決めましょう。',
+        preparingCoursesTitle: 'Courses',
+        preparingCoursesBody:
+          '所属大学の要件と照らし合わせて履修計画を立てましょう。人気科目はすぐ埋まることがあるため、登録開始前に代替案を用意しておくと安心です。',
+        preparingVisaTitle: 'Visa',
+        preparingVisaBody:
+          'DS-2019/I-20 の発行、面接予約、入国期限までを時系列で管理しましょう。重要書類はデータと紙の両方で保管しておくのが安全です。',
+        preparingFinanceTitle: 'Finance',
+        preparingFinanceBody:
+          '家賃、食費、交通費、教材費、防寒用品を含めた月次予算を作りましょう。米国での口座・カード手数料・緊急出費への備えも確認しておくと安心です。',
+        preparingEssentialsTitle: 'Essentials',
+        preparingEssentialsBody:
+          '出発前に、保険の確認、常備薬、防寒着、SIMプラン、到着後すぐ使う連絡先を準備しておくと初月が安定します。',
         arrivingEyebrow: '到着後の立ち上げ',
         arrivingTitle: 'マディソン到着後',
         arrivingDescription:
