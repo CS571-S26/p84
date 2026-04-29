@@ -1,5 +1,6 @@
 import Alert from 'react-bootstrap/Alert'
 import { useTranslation } from 'react-i18next'
+import bascomHill from '../img/bascom_hill.jpg'
 
 function ExchangeConsideringPage() {
   const { t } = useTranslation()
@@ -9,9 +10,7 @@ function ExchangeConsideringPage() {
       <section>
         <p className="section-kicker">{t('exchange.considering.eyebrow')}</p>
         <h2 className="saved-heading">{t('exchange.considering.heroHeadline')}</h2>
-        <p className="section-description">
-          {t('exchange.considering.heroImagePlaceholder')}
-        </p>
+        <img src={bascomHill} alt="Bascom Hill at UW-Madison" className="img-fluid rounded-4 mt-3" />
       </section>
 
       <section>
@@ -37,17 +36,11 @@ function ExchangeConsideringPage() {
       <section>
         <h3>{t('exchange.considering.studentLifeTitle')}</h3>
         <p className="section-description">{t('exchange.considering.studentLifeBody')}</p>
-        <p className="section-description">
-          {t('exchange.considering.studentLifeImagePlaceholder')}
-        </p>
       </section>
 
       <section>
         <h3>{t('exchange.considering.whyJsaTitle')}</h3>
         <p className="section-description">{t('exchange.considering.whyJsaBody')}</p>
-        <p className="section-description">
-          {t('exchange.considering.communityImagePlaceholder')}
-        </p>
       </section>
 
       <section>
