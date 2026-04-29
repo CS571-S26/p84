@@ -82,6 +82,7 @@ function EventFilterBar({
             <Form.Control
               type="date"
               value={startDate}
+              max={endDate || undefined}
               onChange={(event) => onStartDateChange(event.target.value)}
             />
           </Form.Group>
@@ -90,6 +91,7 @@ function EventFilterBar({
             <Form.Control
               type="date"
               value={endDate}
+              min={startDate || undefined}
               onChange={(event) => onEndDateChange(event.target.value)}
             />
           </Form.Group>

@@ -87,6 +87,7 @@ const toEventItem = (event: GoogleCalendarEvent, locale: string): CalendarEventI
     id: event.id,
     title: event.summary ?? 'Untitled event',
     date: formatEventDate(start, isAllDay, locale),
+    startsAt: start.toISOString(),
     location: event.location ?? '',
     description: event.description ?? '',
     calendarUrl: createGoogleCalendarUrl(event, start, end),

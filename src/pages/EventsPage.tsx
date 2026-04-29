@@ -71,6 +71,17 @@ const getDateRange = (preset: DatePreset, customStartDate: string, customEndDate
 
   const parsedStart = customStartDate ? new Date(`${customStartDate}T00:00:00`) : null
   const parsedEnd = customEndDate ? new Date(`${customEndDate}T00:00:00`) : null
+  const hasInvalidCustomRange =
+    parsedStart !== null &&
+    parsedEnd !== null &&
+    parsedEnd.getTime() < parsedStart.getTime()
+
+  if (hasInvalidCustomRange) {
+    return {
+      start: parsedStart,
+      end: addDays(parsedStart, 1),
+    }
+  }
 
   return {
     start: parsedStart,
@@ -200,6 +211,23 @@ function EventsPage() {
     }
   }
 
+  const handleStartDateChange = (value: string) => {
+    setStartDate(value)
+
+    if (value && endDate && endDate < value) {
+      setEndDate(value)
+    }
+  }
+
+  const handleEndDateChange = (value: string) => {
+    if (value && startDate && value < startDate) {
+      setEndDate(startDate)
+      return
+    }
+
+    setEndDate(value)
+  }
+
   return (
     <div className="d-grid gap-4">
       <div className="section-intro">
@@ -219,8 +247,8 @@ function EventsPage() {
         searchTerm={searchTerm}
         onCategoryChange={setSelectedCategory}
         onDatePresetChange={handleDatePresetChange}
-        onStartDateChange={setStartDate}
-        onEndDateChange={setEndDate}
+        onStartDateChange={handleStartDateChange}
+        onEndDateChange={handleEndDateChange}
         onSearchChange={setSearchTerm}
       />
 
