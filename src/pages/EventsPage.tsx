@@ -4,20 +4,90 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import { useTranslation } from 'react-i18next'
-import { appConfig } from '../config/appConfig'
+import { appConfig, eventCategories, type EventCategory } from '../config/appConfig'
 import EventCard from '../components/EventCard'
 import EventFilterBar from '../components/EventFilterBar'
 import type { EventItem } from '../data/events'
 import { fetchGoogleCalendarEvents } from '../utils/googleCalendar'
 
 const savedEventsKey = 'jsa-saved-events'
-const calendarId = appConfig.googleCalendarId
 const calendarApiKey = appConfig.googleCalendarApiKey
-const hasCalendarConfig = Boolean(calendarId && calendarApiKey)
+type EventFilterCategory = EventCategory | 'all'
+type DatePreset = 'all' | 'today' | 'thisWeek' | 'thisMonth' | 'custom'
+const getEventKey = (event: EventItem) => `${event.category}:${event.id ?? event.title}`
+const sortByStartsAt = (a: EventItem, b: EventItem) => {
+  const aTime = a.startsAt ? new Date(a.startsAt).getTime() : Number.POSITIVE_INFINITY
+  const bTime = b.startsAt ? new Date(b.startsAt).getTime() : Number.POSITIVE_INFINITY
+
+  if (aTime !== bTime) {
+    return aTime - bTime
+  }
+
+  return a.title.localeCompare(b.title)
+}
+
+const getStartOfToday = () => {
+  const now = new Date()
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate())
+}
+
+const formatDateInputValue = (date: Date) => {
+  const year = date.getFullYear()
+  const month = `${date.getMonth() + 1}`.padStart(2, '0')
+  const day = `${date.getDate()}`.padStart(2, '0')
+
+  return `${year}-${month}-${day}`
+}
+
+const addDays = (date: Date, days: number) => {
+  const next = new Date(date)
+  next.setDate(next.getDate() + days)
+  return next
+}
+
+const getDateRange = (preset: DatePreset, customStartDate: string, customEndDate: string) => {
+  if (preset === 'all') {
+    return { start: null, end: null }
+  }
+
+  const startOfToday = getStartOfToday()
+
+  if (preset === 'today') {
+    return { start: startOfToday, end: addDays(startOfToday, 1) }
+  }
+
+  if (preset === 'thisWeek') {
+    const dayOfWeek = startOfToday.getDay()
+    const offsetToMonday = dayOfWeek === 0 ? -6 : 1 - dayOfWeek
+    const weekStart = addDays(startOfToday, offsetToMonday)
+    return { start: weekStart, end: addDays(weekStart, 7) }
+  }
+
+  if (preset === 'thisMonth') {
+    const monthStart = new Date(startOfToday.getFullYear(), startOfToday.getMonth(), 1)
+    const nextMonthStart = new Date(startOfToday.getFullYear(), startOfToday.getMonth() + 1, 1)
+    return { start: monthStart, end: nextMonthStart }
+  }
+
+  const parsedStart = customStartDate ? new Date(`${customStartDate}T00:00:00`) : null
+  const parsedEnd = customEndDate ? new Date(`${customEndDate}T00:00:00`) : null
+
+  return {
+    start: parsedStart,
+    end: parsedEnd ? addDays(parsedEnd, 1) : null,
+  }
+}
 
 function EventsPage() {
   const { i18n, t } = useTranslation()
+  const [selectedCategory, setSelectedCategory] = useState<EventFilterCategory>('all')
+  const [selectedDatePreset, setSelectedDatePreset] = useState<DatePreset>('all')
+  const [startDate, setStartDate] = useState('')
+  const [endDate, setEndDate] = useState('')
   const [events, setEvents] = useState<EventItem[]>([])
+  const hasCalendarConfig = Boolean(
+    calendarApiKey && eventCategories.some((category) => appConfig.googleCalendarIds[category]),
+  )
   const [isLoading, setIsLoading] = useState(hasCalendarConfig)
   const [error, setError] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
@@ -46,7 +116,6 @@ function EventsPage() {
       setError(t('events.configMissing'))
       return
     }
-    const configuredCalendarId = calendarId as string
     const configuredCalendarApiKey = calendarApiKey as string
 
     const abortController = new AbortController()
@@ -55,14 +124,28 @@ function EventsPage() {
       try {
         setIsLoading(true)
         setError('')
-        setEvents(
-          await fetchGoogleCalendarEvents({
-            apiKey: configuredCalendarApiKey,
-            calendarId: configuredCalendarId,
-            locale: i18n.resolvedLanguage ?? 'en',
-            signal: abortController.signal,
+        const eventLists = await Promise.all(
+          eventCategories.map(async (category) => {
+            const calendarId = appConfig.googleCalendarIds[category]
+
+            if (!calendarId) {
+              return []
+            }
+
+            const categoryEvents = await fetchGoogleCalendarEvents({
+              apiKey: configuredCalendarApiKey,
+              calendarId,
+              locale: i18n.resolvedLanguage ?? 'en',
+              signal: abortController.signal,
+            })
+
+            return categoryEvents.map((event) => ({
+              ...event,
+              category,
+            }))
           }),
         )
+        setEvents(eventLists.flat())
       } catch (caughtError) {
         if (caughtError instanceof DOMException && caughtError.name === 'AbortError') {
           return
@@ -78,24 +161,43 @@ function EventsPage() {
     void loadEvents()
 
     return () => abortController.abort()
-  }, [hasCalendarConfig, i18n.resolvedLanguage, t])
+  }, [calendarApiKey, hasCalendarConfig, i18n.resolvedLanguage, t])
 
   const normalizedSearch = searchTerm.trim().toLowerCase()
+  const dateRange = getDateRange(selectedDatePreset, startDate, endDate)
   const filteredEvents = events.filter((event) => {
+    const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory
     const matchesSearch =
       normalizedSearch.length === 0 ||
       `${event.title} ${event.description} ${event.location}`.toLowerCase().includes(normalizedSearch)
+    const eventTime = event.startsAt ? new Date(event.startsAt).getTime() : NaN
+    const hasEventTime = Number.isFinite(eventTime)
+    const matchesDate =
+      selectedDatePreset === 'all' ||
+      (hasEventTime &&
+        (dateRange.start === null || eventTime >= dateRange.start.getTime()) &&
+        (dateRange.end === null || eventTime < dateRange.end.getTime()))
 
-    return matchesSearch
-  })
-  const savedEvents = events.filter((event) => savedIds.includes(event.id ?? event.title))
+    return matchesCategory && matchesSearch && matchesDate
+  }).sort(sortByStartsAt)
+  const savedEvents = events
+    .filter((event) => savedIds.includes(getEventKey(event)))
+    .sort(sortByStartsAt)
 
-  const handleToggleSave = (eventId: string) => {
+  const handleToggleSave = (eventKey: string) => {
     setSavedIds((currentIds) =>
-      currentIds.includes(eventId)
-        ? currentIds.filter((currentId) => currentId !== eventId)
-        : [...currentIds, eventId],
+      currentIds.includes(eventKey)
+        ? currentIds.filter((currentId) => currentId !== eventKey)
+        : [...currentIds, eventKey],
     )
+  }
+
+  const handleDatePresetChange = (preset: DatePreset) => {
+    setSelectedDatePreset(preset)
+
+    if (preset === 'custom') {
+      setStartDate(formatDateInputValue(getStartOfToday()))
+    }
   }
 
   return (
@@ -109,7 +211,16 @@ function EventsPage() {
       {error ? <Alert variant="warning">{error}</Alert> : null}
 
       <EventFilterBar
+        selectedCategory={selectedCategory}
+        categories={eventCategories}
+        selectedDatePreset={selectedDatePreset}
+        startDate={startDate}
+        endDate={endDate}
         searchTerm={searchTerm}
+        onCategoryChange={setSelectedCategory}
+        onDatePresetChange={handleDatePresetChange}
+        onStartDateChange={setStartDate}
+        onEndDateChange={setEndDate}
         onSearchChange={setSearchTerm}
       />
 
@@ -131,9 +242,9 @@ function EventsPage() {
       <div className="event-list-scroll d-grid gap-3">
         {filteredEvents.map((event) => (
           <EventCard
-            key={event.id ?? event.title}
+            key={getEventKey(event)}
             event={event}
-            isSaved={savedIds.includes(event.id ?? event.title)}
+            isSaved={savedIds.includes(getEventKey(event))}
             onToggleSave={handleToggleSave}
           />
         ))}
@@ -145,9 +256,10 @@ function EventsPage() {
         <Row className="g-4">
           {savedEvents.length > 0 ? (
             savedEvents.map((event) => (
-              <Col md={6} key={event.id ?? event.title}>
+              <Col md={6} key={getEventKey(event)}>
                 <div className="saved-event-card">
                   <div>
+                    <span className="pill-label">{t(`categories.${event.category}`)}</span>
                     <h3>{event.title}</h3>
                     <p>{event.date}</p>
                     {event.location ? <p>{event.location}</p> : null}
@@ -166,7 +278,7 @@ function EventsPage() {
                     <Button
                       variant="outline-danger"
                       size="sm"
-                      onClick={() => handleToggleSave(event.id ?? event.title)}
+                      onClick={() => handleToggleSave(getEventKey(event))}
                     >
                       {t('events.removeSaved')}
                     </Button>
