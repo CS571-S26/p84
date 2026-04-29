@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import { useTranslation } from 'react-i18next'
 import SectionCard from '../components/SectionCard'
 
-function ExchangeUWMadisonPage() {
+function ExchangeConsideringPage() {
   const { t } = useTranslation()
 
   const highlights = [
@@ -44,4 +44,4 @@ function ExchangeUWMadisonPage() {
   )
 }
 
-export default ExchangeUWMadisonPage
+export default ExchangeConsideringPage

@@ -13,11 +13,17 @@ function ExchangePage() {
       </div>
 
       <div className="exchange-links-row">
-        <NavLink to="/exchange" end className="cta-link cta-outline">
-          {t('exchange.subnavOverview')}
+        <NavLink to="/exchange/considering-uw-madison" className="cta-link cta-outline">
+          {t('exchange.subnavConsidering')}
         </NavLink>
-        <NavLink to="/exchange/uw-madison" className="cta-link cta-outline">
-          {t('exchange.subnavUwm')}
+        <NavLink to="/exchange/preparing-for-uw-madison" className="cta-link cta-outline">
+          {t('exchange.subnavPreparing')}
+        </NavLink>
+        <NavLink to="/exchange/arriving-in-madison" className="cta-link cta-outline">
+          {t('exchange.subnavArriving')}
+        </NavLink>
+        <NavLink to="/exchange/resources" className="cta-link cta-outline">
+          {t('exchange.subnavResources')}
         </NavLink>
       </div>
 

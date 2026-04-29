@@ -158,8 +158,22 @@ const resources = {
         title: 'A page for exchange students and students considering study abroad.',
         description:
           'This section is meant to help incoming exchange students, visiting students, and UW-Madison students exploring study abroad opportunities connected to Japan.',
-        subnavOverview: 'Exchange Guide',
-        subnavUwm: 'Why UW-Madison',
+        subnavConsidering: 'Considering UW-Madison',
+        subnavPreparing: 'Preparing for UW-Madison',
+        subnavArriving: 'Arriving in Madison',
+        subnavResources: 'Current Students / Resources',
+        preparingEyebrow: 'Before Departure',
+        preparingTitle: 'Preparing for UW-Madison',
+        preparingDescription:
+          'Plan the essentials early, including housing, academics, visa timing, and the support networks you will use after arrival.',
+        arrivingEyebrow: 'First Weeks On Campus',
+        arrivingTitle: 'Arriving in Madison',
+        arrivingDescription:
+          'Use your first weeks to settle your routines, build community, and connect with events and organizations that make campus life easier.',
+        resourcesEyebrow: 'Practical Resources',
+        resourcesTitle: 'Current Students / Resources',
+        resourcesDescription:
+          'Use these pages and channels to find events, common answers, career opportunities, and direct support from JSA.',
         uwEyebrow: 'Destination Spotlight',
         uwTitle: 'Why choose UW-Madison for study abroad?',
         uwDescription:
@@ -442,8 +456,22 @@ const resources = {
         title: '交換留学生や留学を考えている人のためのページです。',
         description:
           'このページは、これから UW-Madison に来る交換留学生や、将来の留学を考えている学生に向けて、JSA やキャンパスでのつながり方を紹介するためのものです。',
-        subnavOverview: '留学ガイド',
-        subnavUwm: 'UW-Madisonの魅力',
+        subnavConsidering: 'UW-Madisonを検討中',
+        subnavPreparing: 'UW-Madison 渡航準備',
+        subnavArriving: 'マディソン到着後',
+        subnavResources: '在学生向け / リソース',
+        preparingEyebrow: '渡航前の準備',
+        preparingTitle: 'UW-Madison 渡航準備',
+        preparingDescription:
+          '住居、履修、ビザ、到着後の支援先など、早めに準備すべき内容を整理しておくと安心です。',
+        arrivingEyebrow: '到着後の立ち上げ',
+        arrivingTitle: 'マディソン到着後',
+        arrivingDescription:
+          '最初の数週間で生活リズムと人間関係を整え、イベントやコミュニティにつながることで適応しやすくなります。',
+        resourcesEyebrow: '実用リソース',
+        resourcesTitle: '在学生向け / リソース',
+        resourcesDescription:
+          'イベント情報、FAQ、キャリア情報、お問い合わせを活用して、必要な支援へすぐにアクセスできます。',
         uwEyebrow: '留学先の魅力',
         uwTitle: '留学先としての UW-Madison の魅力',
         uwDescription:
