@@ -800,6 +800,79 @@
   font-weight: 700;
 }
 
+.exchange-subpage {
+  width: 100%;
+}
+
+.exchange-subpage-hero {
+  position: relative;
+  height: 280px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  box-shadow: var(--uw-shadow);
+}
+
+.exchange-subpage-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.exchange-subpage-hero-overlay {
+  position: absolute;
+  inset: 0;
+  max-width: 56%;
+  padding: 1.45rem 1.6rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.74) 70%, rgba(255, 255, 255, 0));
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+}
+
+.exchange-subpage-intro {
+  padding: 1.2rem 1.3rem;
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.exchange-subpage-intro h3 {
+  margin: 0 0 0.5rem;
+  color: var(--uw-red);
+  font-size: clamp(1.35rem, 2.1vw, 1.9rem);
+}
+
+.exchange-subpage-card .info-card {
+  border-radius: 20px;
+}
+
+.exchange-resources-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.exchange-resource-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 78px;
+  border: 1px solid rgba(18, 18, 18, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--uw-black);
+  font-weight: 700;
+  text-align: center;
+  box-shadow: var(--uw-shadow);
+}
+
+.exchange-resource-link:hover {
+  color: var(--uw-red);
+  border-color: rgba(197, 5, 12, 0.34);
+}
+
 .accordion-button:not(.collapsed) {
   background: rgba(197, 5, 12, 0.08);
   color: var(--uw-red-dark);
@@ -1073,5 +1146,19 @@
 
   .considering-pillars article:first-child {
     border-top: 0;
+  }
+
+  .exchange-subpage-hero {
+    height: 220px;
+  }
+
+  .exchange-subpage-hero-overlay {
+    max-width: 100%;
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.74));
+  }
+
+  .exchange-resources-grid {
+    grid-template-columns: 1fr;
   }
 }
