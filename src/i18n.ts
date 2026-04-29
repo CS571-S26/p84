@@ -27,10 +27,10 @@ const resources = {
         at: 'at',
       },
       categories: {
-        cultural: 'Cultural',
-        language: 'Language',
-        professional: 'Professional',
-        community: 'Community',
+        career: 'Career',
+        communityCulture: 'Community/Culture',
+        collaborations: 'Collaborations',
+        external: 'External',
       },
       roles: {
         president: 'President',
@@ -127,7 +127,7 @@ const resources = {
           'Event details will appear here as soon as they are added to the JSA calendar.',
         loading: 'Loading events...',
         configMissing:
-          'The Google Calendar API key has not been configured yet. Add VITE_GOOGLE_CALENDAR_API_KEY to enable live event loading.',
+          'Calendar configuration is incomplete. Add VITE_GOOGLE_CALENDAR_API_KEY and category calendar IDs (VITE_GOOGLE_CALENDAR_ID_CAREER, VITE_GOOGLE_CALENDAR_ID_COMMUNITY_CULTURE, VITE_GOOGLE_CALENDAR_ID_COLLABORATIONS, VITE_GOOGLE_CALENDAR_ID_EXTERNAL).',
         fetchError:
           'Events could not be loaded from Google Calendar. Please check the calendar settings or try again later.',
         emptyTitle: 'No events found',
@@ -289,10 +289,10 @@ const resources = {
         at: '',
       },
       categories: {
-        cultural: '文化',
-        language: '言語',
-        professional: 'キャリア',
-        community: 'コミュニティ',
+        career: 'キャリア',
+        communityCulture: 'コミュニティ/文化',
+        collaborations: 'コラボ',
+        external: '外部',
       },
       roles: {
         president: '会長',
@@ -386,7 +386,7 @@ const resources = {
           'JSA のカレンダーにイベントが追加され次第、こちらに表示されます。',
         loading: 'イベントを読み込んでいます...',
         configMissing:
-          'Google Calendar API キーがまだ設定されていません。ライブイベントを読み込むには VITE_GOOGLE_CALENDAR_API_KEY を追加してください。',
+          'カレンダー設定が不足しています。VITE_GOOGLE_CALENDAR_API_KEY とカテゴリ別カレンダーID（VITE_GOOGLE_CALENDAR_ID_CAREER / VITE_GOOGLE_CALENDAR_ID_COMMUNITY_CULTURE / VITE_GOOGLE_CALENDAR_ID_COLLABORATIONS / VITE_GOOGLE_CALENDAR_ID_EXTERNAL）を設定してください。',
         fetchError:
           'Google Calendar からイベントを読み込めませんでした。カレンダー設定を確認するか、後でもう一度お試しください。',
         emptyTitle: '該当するイベントがありません',
