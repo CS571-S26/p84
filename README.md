@@ -1,75 +1,79 @@
-# React + TypeScript + Vite
+# JSA Website (UW-Madison)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official website for the Japanese Student Association (JSA) at UW-Madison.  
+It provides event listings, organization information, study abroad guidance, FAQ, career resources, and a contact form.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- Vite
+- React Router (`HashRouter`)
+- React Bootstrap + Bootstrap 5
+- i18next / react-i18next
 
-## React Compiler
+## Local Development
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app runs at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `npm run dev`: Start the development server
+- `npm run build`: Run TypeScript build and production build
+- `npm run preview`: Preview the production build locally
+- `npm run lint`: Run ESLint
+
+## Environment Variables
+
+The following variables are used for Google Calendar event integration.
+
+```env
+VITE_GOOGLE_CALENDAR_API_KEY=your_google_calendar_api_key_here
+VITE_GOOGLE_CALENDAR_ID_CAREER=your_career_calendar_id_here
+VITE_GOOGLE_CALENDAR_ID_COMMUNITY_CULTURE=your_community_culture_calendar_id_here
+VITE_GOOGLE_CALENDAR_ID_COLLABORATIONS=your_collaborations_calendar_id_here
+VITE_GOOGLE_CALENDAR_ID_EXTERNAL=your_external_calendar_id_here
 ```
+
+Copy `.env.example` to `.env` and fill in your values.
+
+## Routing Structure
+
+- `/` Home
+- `/about` About
+- `/events` Events
+- `/exchange`
+- `/exchange/considering-uw-madison`
+- `/exchange/preparing-for-uw-madison`
+- `/exchange/arriving-in-madison`
+- `/exchange/resources`
+- `/board`
+- `/board/2025-2026`
+- `/faq`
+- `/careers`
+- `/contact`
+
+## Deployment (GitHub Pages)
+
+Pushes to the `main` branch trigger GitHub Pages deployment via GitHub Actions (`.github/workflows/deploy.yml`).
+
+The following GitHub Secrets are required in Actions.
+
+- `VITE_GOOGLE_CALENDAR_API_KEY`
+- `VITE_GOOGLE_CALENDAR_ID_CAREER`
+- `VITE_GOOGLE_CALENDAR_ID_COMMUNITY_CULTURE`
+- `VITE_GOOGLE_CALENDAR_ID_COLLABORATIONS`
+- `VITE_GOOGLE_CALENDAR_ID_EXTERNAL`
+
+## Project Structure (Main)
+
+- `src/pages/`: Page components
+- `src/components/`: Reusable UI components
+- `src/config/appConfig.ts`: Environment variable loading and app config
+- `src/utils/googleCalendar.ts`: Google Calendar fetching logic
+- `src/i18n.ts`: English/Japanese translation resources
