@@ -595,7 +595,7 @@
 
 .considering-hero-banner {
   position: relative;
-  height: 120px;
+  height: 220px;
   border-radius: 26px;
   overflow: hidden;
   border: 1px solid rgba(18, 18, 18, 0.08);
@@ -615,7 +615,7 @@
   position: absolute;
   inset: 0;
   max-width: 52%;
-  padding: 1.6rem 1.8rem 1.2rem;
+  padding: 1.2rem 1.4rem 0.9rem;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.74) 62%, rgba(255, 255, 255, 0));
   display: grid;
   gap: 0.5rem;
@@ -625,8 +625,8 @@
 .considering-hero-title {
   margin: 0;
   color: var(--uw-black);
-  font-size: clamp(2rem, 4.2vw, 4.2rem);
-  line-height: 1.03;
+  font-size: clamp(1.6rem, 3.2vw, 3rem);
+  line-height: 1.05;
 }
 
 .considering-hero-cta {
@@ -1055,12 +1055,12 @@
   }
 
   .considering-hero-banner {
-    height: 96px;
+    height: 180px;
   }
 
   .considering-hero-overlay {
     max-width: 100%;
-    padding: 1.15rem;
+    padding: 0.95rem;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72));
   }
 
