@@ -612,7 +612,7 @@
   inset: 0;
   max-width: 52%;
   padding: 1.7rem 1.9rem 1.25rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.82) 62%, rgba(255, 255, 255, 0.08));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.74) 72%, rgba(255, 255, 255, 0));
   display: grid;
   gap: 0.5rem;
   align-content: start;
@@ -1053,7 +1053,7 @@
   .considering-hero-overlay {
     max-width: 100%;
     padding: 1.1rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.82));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72) 78%);
   }
 
   .considering-why-layout,
