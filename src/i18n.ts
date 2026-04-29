@@ -136,6 +136,14 @@ const resources = {
         searchPlaceholder: 'Search by keyword',
         category: 'Category',
         all: 'All',
+        dateFilter: 'Date',
+        allDates: 'All Dates',
+        today: 'Today',
+        thisWeek: 'This Week',
+        thisMonth: 'This Month',
+        customRange: 'Custom Range',
+        startDate: 'Start Date',
+        endDate: 'End Date',
         savedCount_one: 'You currently have {{count}} saved event for later.',
         savedCount_other: 'You currently have {{count}} saved events for later.',
         noSavedBody:
@@ -150,6 +158,24 @@ const resources = {
         title: 'A page for exchange students and students considering study abroad.',
         description:
           'This section is meant to help incoming exchange students, visiting students, and UW-Madison students exploring study abroad opportunities connected to Japan.',
+        subnavOverview: 'Exchange Guide',
+        subnavUwm: 'Why UW-Madison',
+        uwEyebrow: 'Destination Spotlight',
+        uwTitle: 'Why choose UW-Madison for study abroad?',
+        uwDescription:
+          'UW-Madison combines strong academics, a vibrant campus community, and practical support systems that help international and exchange students thrive.',
+        uwAcademicsTitle: 'Top-tier academics across many fields',
+        uwAcademicsBody:
+          'Students can access highly ranked programs, flexible course options, and opportunities to learn from faculty with global research backgrounds.',
+        uwCampusTitle: 'Welcoming student life and traditions',
+        uwCampusBody:
+          'From student organizations and events to the lakeside campus culture, UW-Madison offers many ways to build friendships and feel part of the community quickly.',
+        uwSupportTitle: 'Reliable support for international students',
+        uwSupportBody:
+          'Advising, language support, and peer communities make it easier to adjust to classes, daily life, and long-term planning while abroad.',
+        uwLocationTitle: 'A balanced college city experience',
+        uwLocationBody:
+          'Madison is known for safety, walkability, and quality of life, giving students both an active campus environment and a comfortable place to live.',
         beforeArrivalTitle: 'Before You Arrive',
         beforeArrivalBody:
           'Start by checking housing, course planning, visa timelines, and what kind of support network you want once you get to Madison.',
@@ -395,6 +421,14 @@ const resources = {
         searchPlaceholder: 'キーワードで検索',
         category: 'カテゴリ',
         all: 'すべて',
+        dateFilter: '日付',
+        allDates: 'すべての日付',
+        today: '今日',
+        thisWeek: '今週',
+        thisMonth: '今月',
+        customRange: '期間指定',
+        startDate: '開始日',
+        endDate: '終了日',
         savedCount_one: '保存済みイベントが {{count}} 件あります。',
         savedCount_other: '保存済みイベントが {{count}} 件あります。',
         noSavedBody: '気になるイベントは保存して、あとから簡単に確認できます。',
@@ -408,6 +442,24 @@ const resources = {
         title: '交換留学生や留学を考えている人のためのページです。',
         description:
           'このページは、これから UW-Madison に来る交換留学生や、将来の留学を考えている学生に向けて、JSA やキャンパスでのつながり方を紹介するためのものです。',
+        subnavOverview: '留学ガイド',
+        subnavUwm: 'UW-Madisonの魅力',
+        uwEyebrow: '留学先の魅力',
+        uwTitle: '留学先としての UW-Madison の魅力',
+        uwDescription:
+          'UW-Madison は、高い教育水準、活気あるキャンパス文化、そして留学生向けの支援体制がそろった、安心して学べる留学先です。',
+        uwAcademicsTitle: '幅広い分野で高水準の学び',
+        uwAcademicsBody:
+          '評価の高い学部・大学院プログラムがそろっており、関心に合わせた柔軟な履修が可能です。',
+        uwCampusTitle: '参加しやすい学生コミュニティ',
+        uwCampusBody:
+          '学生団体やイベントが豊富で、到着後の早い段階から友人や居場所を作りやすい環境です。',
+        uwSupportTitle: '留学生向けサポートが充実',
+        uwSupportBody:
+          'アドバイジングや言語面の支援、学生コミュニティが、学業と生活の立ち上げをしっかり支えます。',
+        uwLocationTitle: '暮らしやすい大学都市マディソン',
+        uwLocationBody:
+          '安全性や生活のしやすさに定評があり、学業と日常生活のバランスを取りやすい都市です。',
         beforeArrivalTitle: '渡航前に考えたいこと',
         beforeArrivalBody:
           '住居、履修、ビザの準備に加えて、到着後にどんなコミュニティとつながりたいかを考えておくと安心です。',
