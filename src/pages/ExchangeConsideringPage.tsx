@@ -13,9 +13,6 @@ function ExchangeConsideringPage() {
           <p className="section-kicker">{t('exchange.considering.eyebrow')}</p>
           <h2 className="considering-hero-title">{t('exchange.considering.heroHeadline')}</h2>
           <p className="section-description">{t('exchange.considering.whyBody')}</p>
-          <a href="#next-step" className="cta-link cta-primary considering-hero-cta">
-            {t('exchange.considering.ctaTitle')}
-          </a>
         </div>
       </section>
 
@@ -53,7 +50,7 @@ function ExchangeConsideringPage() {
         <div className="considering-facts-grid">
           <article><h4>#36</h4><p>{t('exchange.considering.quickFact1')}</p></article>
           <article><h4>#12</h4><p>{t('exchange.considering.quickFact1b')}</p></article>
-          <article><h4>#9</h4><p>{t('exchange.considering.quickFact2')}</p></article>
+          <article><h4>#1</h4><p>{t('exchange.considering.quickFact2')}</p></article>
           <article><h4>48,000+</h4><p>{t('exchange.considering.quickFact4')}</p></article>
           <article><h4>Madison, WI</h4><p>{t('exchange.considering.quickFact5')}</p></article>
         </div>
@@ -90,13 +87,7 @@ function ExchangeConsideringPage() {
         <p className="section-kicker">{t('exchange.considering.ctaEyebrow')}</p>
         <h2 className="saved-heading">{t('exchange.considering.ctaTitle')}</h2>
         <p className="section-description">{t('exchange.considering.ctaBody')}</p>
-        <Alert variant="light" className="mb-0">
-          {t('exchange.considering.ctaTip')}
-        </Alert>
         <div className="considering-cta-actions">
-          <span>{t('exchange.ctaContact')}</span>
-          <span>{t('exchange.ctaEvents')}</span>
-          <span>{t('exchange.ctaFaq')}</span>
         </div>
       </section>
     </article>

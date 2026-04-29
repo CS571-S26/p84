@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import jsaOnigiri from '../assets/jsa_onigiri.jpg'
+import jsaSpringFes from '../assets/jsa_springfes.jpg'
 
 function ExchangeResourcesPage() {
   const { t } = useTranslation()
@@ -8,7 +8,7 @@ function ExchangeResourcesPage() {
   return (
     <div className="exchange-subpage d-grid gap-4">
       <section className="exchange-subpage-hero">
-        <img src={jsaOnigiri} alt="Current Students and Resources" className="exchange-subpage-hero-image" />
+        <img src={jsaSpringFes} alt="Current Students and Resources" className="exchange-subpage-hero-image" />
         <div className="exchange-subpage-hero-overlay">
           <p className="section-kicker">{t('exchange.resourcesEyebrow')}</p>
           <h2 className="saved-heading">{t('exchange.resourcesTitle')}</h2>

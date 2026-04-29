@@ -22,11 +22,11 @@ const resources = {
       common: {
         noSavedEvents: 'No saved events yet',
         savedEventsPreview: 'Saved events',
-        savedSnapshot: 'Your List',
+        savedSnapshot: 'Your saved list',
       },
       categories: {
         career: 'Career',
-        communityCulture: 'Community/Culture',
+        communityCulture: 'Community & Culture',
         collaborations: 'Collaborations',
         external: 'External',
       },
@@ -41,36 +41,36 @@ const resources = {
       },
       newsletter: {
         eyebrow: 'Newsletter',
-        title: 'Stay updated with JSA',
+        title: 'Stay up to date with JSA',
         description:
           'Sign up for our newsletter to hear about upcoming events, announcements, and community updates.',
-        button: 'Sign Up',
+        button: 'Sign up',
       },
       home: {
-        eyebrow: 'UW-Madison Registered Student Organization (RSO)',
-        title: 'For centering Japanese community',
+        eyebrow: 'UW-Madison Registered Student Organization',
+        title: 'A home for the Japanese community',
         description:
-          'The Japanese Student Association is a social and cultural organization intended to spread Japanese culture and contribute to diversity on the UW-Madison campus.',
+          'The Japanese Student Association is a social and cultural organization that shares Japanese culture and helps build a more connected, diverse UW-Madison campus.',
         ctaEvents: 'Explore Events',
         ctaAbout: 'Learn About JSA',
         culturalTitle: 'Cultural Community',
         culturalBody:
-          'Highlight traditions, seasonal celebrations, and casual gatherings that help students feel at home.',
+          'We celebrate traditions, seasonal events, and casual gatherings that help students feel at home.',
         languageTitle: 'Language Exchange',
         languageBody:
-          'Create accessible ways for students to practice Japanese conversation and build confidence.',
+          'We create approachable spaces for students to practice Japanese conversation and build confidence.',
         careerTitle: 'Career Support',
         careerBody:
-          'Share opportunities, alumni connections, and professional events tailored to international and domestic students.',
+          'We share opportunities, alumni connections, and professional events for both international and domestic students.',
       },
       about: {
         eyebrow: 'About JSA',
-        title: 'A student organization centered on belonging and exchange through Japan.',
+        title: 'A student organization for belonging, exchange, and connection through Japan.',
         description:
-          'The site introduces what JSA offers to Japanese students, language learners, and anyone hoping to engage with Japanese culture at UW-Madison.',
+          'Learn how JSA supports Japanese students, language learners, and anyone hoping to connect with Japanese culture at UW-Madison.',
         storyTitle: 'JSA at UW-Madison',
         storyP1:
-          'The Japanese Student Association (JSA) at UW-Madison was founded in 2014. While the number of Japanese students is relatively small, UW-Madison has one of the largest Japanese language programs in the Midwest, with around 400 learners. JSA supports both the Japanese student community and students learning Japanese through campus activities and collaboration with the Japanese program.',
+          'The Japanese Student Association (JSA) at UW-Madison was founded in 2014. Although the Japanese student population is relatively small, UW-Madison has one of the largest Japanese language programs in the Midwest, with around 400 learners. JSA supports both the Japanese student community and students learning Japanese through campus activities and collaboration with the Japanese program.',
         storyP2:
           'UW-Madison has a long relationship with Japan. The university has developed research partnerships, study abroad pathways, and international internships, and it maintains exchange agreements with universities such as Waseda, Keio, and Kyoto University.',
         storyP3:
@@ -81,7 +81,7 @@ const resources = {
           'JSA aims to help students build both academic and social connections through Japanese culture. UW-Madison also offers Japan-related opportunities such as the JR Central internship and alumni networking. For details, please visit our Events and Contact pages.',
         missionTitle: 'Mission',
         missionBody:
-          'Support students through events that make campus feel smaller, warmer, and more connected.',
+          'We support students through events that make campus feel smaller, warmer, and more connected.',
         hostTitle: 'What We Host',
         hostBody:
           'Cultural programs, conversation tables, social mixers, and professional development opportunities.',
@@ -116,13 +116,13 @@ const resources = {
         eyebrow: 'Board',
         title: 'Meet the student leaders shaping this community.',
         description:
-          'The board page gives the website a human face and helps visitors understand who organizes programs and support.',
+          'Meet the officers who organize JSA programs, events, and student support.',
         yearLabel: 'Board member directory',
         yearDescription: 'Meet the officers serving JSA during the 2025-2026 academic year.',
       },
       events: {
         eyebrow: 'Events',
-        title: 'Find upcoming JSA events here.',
+        title: 'See what is coming up at JSA.',
         description:
           'Explore upcoming gatherings, cultural programs, and community events hosted by JSA. Search by keyword, save events for later, or add them directly to Google Calendar.',
         loading: 'Loading events...',
@@ -144,8 +144,8 @@ const resources = {
         customRange: 'Custom Range',
         startDate: 'Start Date',
         endDate: 'End Date',
-        savedCount_one: 'You currently have {{count}} saved event for later.',
-        savedCount_other: 'You currently have {{count}} saved events for later.',
+        savedCount_one: 'You have {{count}} saved event.',
+        savedCount_other: 'You have {{count}} saved events.',
         noSavedBody:
           'Use the save button above to keep track of events you want to revisit.',
         save: 'Save Event',
@@ -155,16 +155,16 @@ const resources = {
       },
       exchange: {
         eyebrow: 'Exchange & Study Abroad',
-        title: 'A page for exchange students and students considering study abroad.',
+        title: 'For exchange students and students considering study abroad.',
         description:
-          'This section is meant to help incoming exchange students, visiting students, and UW-Madison students exploring study abroad opportunities connected to Japan.',
+          'This section helps incoming exchange students, visiting students, and UW-Madison students exploring study abroad opportunities connected to Japan.',
         considering: {
           eyebrow: 'Considering UW-Madison',
           heroHeadline:
-            'Study in a top U.S. public university and build a real support network.',
+            'Study at a top U.S. public university and build a real support network.',
           whyTitle: 'Why UW-Madison',
           whyBody:
-            'UW-Madison is a strong choice if you want both academic quality and a realistic student life. You get globally recognized programs, active research opportunities, and a large campus community where international students can find peers quickly.',
+            'UW-Madison is a strong choice if you want both academic quality and a practical student-life experience. You will find globally recognized programs, active research opportunities, and a large campus community where international students can meet peers quickly.',
           pillar1Title: 'Top-Ranked Public University',
           pillar1Body: 'Consistently recognized among the strongest U.S. public universities.',
           pillar2Title: 'Strong Academics & Research',
@@ -175,21 +175,21 @@ const resources = {
           pillar4Body: 'Lakeside campus life in a safe and student-friendly college city.',
           quickFactsTitle: 'Quick Facts',
           quickFact1:
-            'Ranked around #36 overall and #12 among U.S. public universities (U.S. News, 2026 ranking release).',
+            'Ranked around #36 overall and #12 among U.S. public universities in the 2026 U.S. News rankings.',
           quickFact1b:
-            'Top public school standing in national rankings (U.S. News, 2026).',
+            'Consistently recognized as one of the top public universities in the United States.',
           quickFact2:
-            'Computer Science is ranked around top 10 among U.S. public universities (#9 in the latest UW/CDIS ranking update).',
+            'Education is ranked around the No.1 among U.S.universities (in the latest U.S. News rankings).',
           quickFact4:
             'Large university scale means many course choices, student organizations, and campus resources, but you should expect to plan early for popular classes.',
           quickFact5:
             'Madison, Wisconsin is a safe, student-focused capital city with strong quality of life.',
           academicsTitle: 'Academics',
           academicsBody:
-            'Strong options include Computer Science, Engineering, and Business, with opportunities to join labs, design teams, and career-focused events. Be realistic: some gateway courses are challenging, and intro classes can be large. If you use office hours, study groups, and advising early, it is manageable and worth it.',
+            'Strong options include Education,Computer Science, Engineering, and Business, with opportunities to join labs, design teams, and career-focused events. Some gateway courses are challenging, and intro classes can be large, so it helps to use office hours, study groups, and advising early.',
           studentLifeTitle: 'Student Life',
           studentLifeBody:
-            'Housing costs vary by location and style, but many students budget roughly $800-$1,500/month for rent. Groceries and meals are manageable with planning, and campus food choices are broad. Winter is real in Madison: snow, wind, and below-freezing days are normal, so a proper coat, boots, and layering are essential for daily life.',
+            'Housing costs vary by location and style, but many students budget roughly $800-$1,500/month for rent. Groceries and meals are manageable with planning, and campus food options are broad. Madison winters are serious: snow, wind, and below-freezing days are normal, so a proper coat, boots, and layers are essential for daily life.',
           whyJsaTitle: 'Why JSA',
           whyJsaBody:
             'JSA helps exchange and international students find people quickly, ask practical questions, and feel less isolated in the first months. From events to everyday advice, you are not expected to figure everything out alone.',
@@ -201,11 +201,9 @@ const resources = {
           voice3:
             '"The classes are demanding, but I gained practical skills and better confidence in English discussion."',
           ctaEyebrow: 'Next Step',
-          ctaTitle: 'If this feels like your direction, start preparing early.',
+          ctaTitle: 'If this feels like the right direction, start preparing early.',
           ctaBody:
             'Compare your course goals, budget, and climate preferences now, then move to "Preparing for UW-Madison" to build your checklist.',
-          ctaTip:
-            'Decision tip: UW-Madison is a great fit for students who want strong academics and are ready for a large, active campus environment.',
         },
         subnavConsidering: 'Considering UW-Madison',
         subnavPreparing: 'Preparing for UW-Madison',
@@ -234,10 +232,25 @@ const resources = {
         arrivingTitle: 'Arriving in Madison',
         arrivingDescription:
           'Use your first weeks to settle your routines, build community, and connect with events and organizations that make campus life easier.',
+        firstWeeksTitle: 'Your First Weeks',
+        firstWeeksBody:
+          'In the first few weeks, focus on setting up daily essentials, learning how campus works, and finding a few people or places you can return to. You do not have to figure everything out at once.',
+        campusLifeTitle: 'Campus Life',
+        campusLifeBody:
+          'Get familiar with your class buildings, libraries, dining options, bus routes, and student services. Small routines make the campus feel much easier to navigate.',
+        communityTitle: 'Finding Community',
+        communityBody:
+          'Student organizations, language tables, and cultural events are some of the easiest ways to meet people. JSA events are open to students who want a friendly place to start.',
+        languageTitle: 'Language Support',
+        languageBody:
+          'Whether you want to practice English, Japanese, or both, conversation-based events can help you build confidence and meet people naturally.',
         resourcesEyebrow: 'Practical Resources',
         resourcesTitle: 'Current Students / Resources',
         resourcesDescription:
           'Use these pages and channels to find events, common answers, career opportunities, and direct support from JSA.',
+        ctaEvents: 'View Events',
+        ctaFaq: 'Read the FAQ',
+        ctaContact: 'Contact JSA',
         beforeArrivalBody:
           'Start by checking housing, course planning, visa timelines, and what kind of support network you want once you get to Madison.',
         supportBody:
@@ -270,22 +283,22 @@ const resources = {
           "JSA supports students interested in Japan-related careers by sharing opportunities, hosting events, and connecting them with our partners.",
         jelperClubTitle: 'Jelper Club',
         jelperClubBody:
-          'A platform that supports the world’s top students who are interested in pursuing professional opportunities and engaging in authentic cultural experiences in Japan regardless of Japanese proficiency.',
+          'A platform for high-achieving students interested in professional opportunities and authentic cultural experiences in Japan, regardless of Japanese proficiency.',
         tkfTitle: 'TKF Global',
         tkfBody:
-          'A student-led career support community for students. Features a large network of mentors who have secured offers from top-tier companies, providing the most real and practical job-hunting advice available. (Advanced-level Japanese proficiency required.)',
-        careerForumTitle: 'Career Forum (By Career-tasu inc.)',
+          'A student-led career support community with a large mentor network of students and graduates who have received offers from top-tier companies. It provides practical, firsthand job-search advice. (Advanced-level Japanese proficiency required.)',
+        careerForumTitle: 'Career Forum (by Career-tasu, Inc.)',
         careerForumBody:
-          'A staple tool to find jobs, not just for students who have study abroad experience but also for Japanese-English bilingual professionals. The events have expanded from Boston to Los Angeles, Tokyo, Osaka, and London, making it the prefect place for global companies to meet and connect with bilingual talent.',
+          'A well-established career resource for students with study abroad experience and Japanese-English bilingual professionals. Its events now take place in Boston, Los Angeles, Tokyo, Osaka, and London, creating opportunities for global companies and bilingual talent to connect.',
         jetTitle: 'JET Program',
         jetBody:
-          'A competitive employment opportunity that allows professionals to live and work in cities, towns, and villages throughout Japan. Most participants serve as Assistant Language Teachers (ALTs) and work in public and private schools throughout Japan; some work as Coordinators for International Relations (CIRs) as interpreters/translators.',
+          'A competitive employment opportunity that allows participants to live and work in cities, towns, and villages throughout Japan. Most serve as Assistant Language Teachers (ALTs) in public and private schools; some work as Coordinators for International Relations (CIRs), often supporting interpretation and translation.',
         jrCentralTitle: 'JR Central Internship',
         jrCentralBody:
-          'Gives students incredible insights into one of the world’s leading high-speed-rail operators as well as the professional culture of Japan. The internship, developed by University of Wisconsin–Madison alumnus and JR Central Chairman Emeritus Yoshiyuki Kasai, allows two to three students to spend eight weeks in various roles with the company',
-		jFindTitle: 'J-Find Visa',
+          'This internship gives students a close look at one of the world’s leading high-speed-rail operators and the professional culture of Japan. Developed by University of Wisconsin–Madison alumnus and JR Central Chairman Emeritus Yoshiyuki Kasai, it allows two to three students to spend eight weeks in various roles with the company.',
+        jFindTitle: 'J-Find Visa',
         jFindBody:
-          'The Future Creation Talent System (J-Find) allows individuals who have graduated from excellent overseas universities, including UW-Madison, to be granted the "Designated Activities" (Future Creation Talent) residence status when engaging in "job-seeking activities" or "preparation activities for starting a business" in Japan, enabling them to stay in Japan for up to two years.'
+          'The Future Creation Individual Visa (J-Find) allows graduates of highly ranked overseas universities, including UW-Madison, to receive "Designated Activities" residence status while job hunting or preparing to start a business in Japan, enabling them to stay for up to two years.',
       },
       contact: {
         eyebrow: 'Contact',
@@ -342,54 +355,54 @@ const resources = {
         ja: 'JA',
       },
       common: {
-        noSavedEvents: 'まだ保存されたイベントはありません',
+        noSavedEvents: '保存したイベントはまだありません',
         savedEventsPreview: '保存したイベント',
         savedSnapshot: 'マイリスト',
       },
       categories: {
         career: 'キャリア',
-        communityCulture: 'コミュニティ/文化',
-        collaborations: 'コラボ',
-        external: '外部',
+        communityCulture: '交流・文化',
+        collaborations: '連携イベント',
+        external: '学外イベント',
       },
       roles: {
         coPresident: '共同会長',
         coPresidentFinance: '共同会長・会計担当',
         socialMediaCoordinator: 'ソーシャルメディア担当',
         eventCoordinator: 'イベント担当',
-        globalRelationsCoordinator: 'グローバルリレーションズ担当',
-        globalRelationsIntern: 'グローバルリレーションズ・インターン',
+        globalRelationsCoordinator: '渉外担当',
+        globalRelationsIntern: '渉外担当インターン',
         communicationsCoordinator: '広報担当',
       },
       newsletter: {
-        eyebrow: 'Newsletter',
-        title: 'JSA の最新情報を受け取る',
+        eyebrow: 'ニュースレター',
+        title: 'イベント情報をメールでお届けします',
         description:
-          'イベント情報やお知らせ、コミュニティの最新情報をニュースレターで受け取れます。',
-        button: '登録する',
+          'JSAのイベントやお知らせを、まとめて受け取れます。',
+        button: 'ニュースレターに登録',
       },
       home: {
-        eyebrow: 'UW-Madison Registered Student Organization (RSO)',
+        eyebrow: 'UW-Madison 公認学生団体',
         title: '日本コミュニティの中心として',
         description:
-          'ウィスコンシン大学マディソン校・日本学生会は、キャンパス全体における日本人コミュニティ構築および日本文化の普及を目指した大学公認の学生団体です。',
+          'JSAは、UW-Madisonで日本にゆかりのある学生や日本文化に関心のある学生が集まるコミュニティです。交流イベントや文化企画を通じて、キャンパスに新しいつながりをつくっています。',
         ctaEvents: 'イベントを見る',
-        ctaAbout: 'JSAについて',
-        culturalTitle: '文化コミュニティ',
-        culturalBody: '季節行事や交流イベントを通じて、安心してつながれる場を紹介します。',
-        languageTitle: '言語交流',
-        languageBody: '日本語会話の練習機会を作り、学習者が自信を持てる環境を目指します。',
-        careerTitle: 'キャリア支援',
-        careerBody: '卒業生とのつながりやキャリア機会を、留学生と現地学生の双方へ共有します。',
+        ctaAbout: 'JSAについて知る',
+        culturalTitle: '季節の行事を楽しむ',
+        culturalBody: '日本の季節行事や食文化、気軽な交流会を通じて、ほっとできる居場所をつくります。',
+        languageTitle: '日本語で話してみる',
+        languageBody: '日本語を学ぶ人も、普段から使いたい人も、気軽に会話を楽しめる機会をつくります。',
+        careerTitle: '日本につながる進路を考える',
+        careerBody: '卒業生や提携団体とのつながりを活かし、日本に関わるキャリア情報を共有します。',
       },
       about: {
         eyebrow: '団体紹介',
-        title: '日本を通じたつながりを大切にする学生団体です。',
+        title: 'JSAは、日本をきっかけに人がつながる場所です。',
         description:
-          'JSAの組織について紹介します。',
-        storyTitle: 'UW-Madison 日本学生会（JSA）について',
+          '活動内容やJSAが大切にしていること、UW-Madisonと日本のつながりを紹介します。',
+        storyTitle: 'UW-Madisonの日本学生会について',
         storyP1:
-          'ウィスコンシン大学マディソン校・日本学生会（JSA）は2014年に設立されました。日本人学生は多くありませんが、UW–Madisonには中西部最大規模の日本語プログラムがあり、約400人の学習者が在籍しています。JSAは日本人コミュニティの強化と、日本語学習者の学びの場づくりを進めています。',
+          'ウィスコンシン大学マディソン校・日本学生会（JSA）は2014年に設立されました。日本人学生の数は多くありませんが、UW–Madisonには中西部最大規模の日本語プログラムがあり、約400人の学習者が在籍しています。JSAは日本人コミュニティを支えながら、日本語を学ぶ学生にも交流や実践の機会を届けています。',
         storyP2:
           'UW–Madisonは日本との関係が深く、研究連携、留学プログラム、国際インターンシップなどの機会があります。早稲田大学、慶應大学、京都大学などとの交換留学協定もあり、国際的な学びの選択肢が広がっています。',
         storyP3:
@@ -400,18 +413,18 @@ const resources = {
           'JSAは、日本文化を学びながら学術的・社会的なつながりを築ける場を目指しています。UW–MadisonにはJR東海インターンシップや日本在住UW卒業生との交流など、日本関連の機会もあります。詳細はイベントページ・お問い合わせページをご確認ください。みなさんのご参加をお待ちしています。',
         missionTitle: 'ミッション',
         missionBody:
-          'イベントや交流を通じて、学生がより身近で温かいコミュニティを感じられるよう支えます。',
-        hostTitle: '主な活動',
+          '大きなキャンパスでも、知り合いが増え、気軽に立ち寄れる場所がある。そんな安心感をイベントを通じてつくります。',
+        hostTitle: '開催しているイベント',
         hostBody:
-          '文化イベント、会話テーブル、交流会、キャリア支援イベントなどを企画しています。',
-        communityEyebrow: 'UW and Japan',
-        communityTitle: 'UW-Madison における日本人学生コミュニティ',
+          '文化イベント、日本語会話の交流会、学生同士のミキサー、キャリア関連企画などを行っています。',
+        communityEyebrow: 'UW-Madisonと日本',
+        communityTitle: 'UW-Madisonで学ぶ日本出身の学生',
         communityDescription:
-          '教務の在籍データをもとに、日本国籍の学生が大学内でどのように在籍しているかの一例をまとめています。',
+          'Office of the Registrarの在籍データをもとに、UW-Madisonに在籍する日本出身学生の状況をまとめています。',
         communityTotalLabel: '日本国籍の学生数',
-        communityTotalContext: '下記の在籍区分を合計した人数',
+        communityTotalContext: '下の区分を合計した人数',
         undergraduateLabel: '学部生',
-        undergraduateContext: '1年生から4年生まで',
+        undergraduateContext: '学部1年生から4年生まで',
         graduateLabel: '大学院生',
         graduateContext: '修士課程・博士課程',
         sourceLabel: '出典',
@@ -424,137 +437,150 @@ const resources = {
           senior: '4年生',
           masters: '修士課程',
           phd: '博士課程',
-          specialStudent: '特別生（交換留学生など）',
+          specialStudent: '特別履修生（交換留学生など）',
         },
         table: {
-          academicLevel: '学年・課程',
+          academicLevel: '区分',
           count: '人数',
         },
       },
       board: {
         eyebrow: '役員紹介',
-        title: 'コミュニティを支える学生リーダーたちです。',
+        title: 'JSAを運営する学生メンバー',
         description:
-          '役員ページでは、誰がイベントや学生支援を担っているのかをわかりやすく伝えます。',
-        yearLabel: '役員年度一覧',
-        yearDescription: '2025-2026 学年度の JSA 役員メンバーです。',
+          'イベント企画や広報、学生サポートを担う役員メンバーを紹介します。',
+        yearLabel: '役員一覧',
+        yearDescription: '2025-2026年度にJSAを運営するメンバーです。',
       },
       events: {
         eyebrow: 'イベント',
-        title: 'JSAのイベント情報',
+        title: '開催予定のイベント',
         description:
-          'JSA が主催する交流イベント、文化プログラム、コミュニティ向けイベントを確認できます。キーワード検索、保存、Google カレンダーへの追加にも対応しています。',
-        loading: 'イベントを読み込んでいます...',
+          '交流会や文化イベント、コラボ企画など、JSAの最新イベント情報を掲載しています。気になるイベントは保存したり、Googleカレンダーに追加したりできます。',
+        loading: 'イベント情報を読み込んでいます...',
         configMissing:
           'カレンダー設定が不足しています。VITE_GOOGLE_CALENDAR_API_KEY とカテゴリ別カレンダーID（VITE_GOOGLE_CALENDAR_ID_CAREER / VITE_GOOGLE_CALENDAR_ID_COMMUNITY_CULTURE / VITE_GOOGLE_CALENDAR_ID_COLLABORATIONS / VITE_GOOGLE_CALENDAR_ID_EXTERNAL）を設定してください。',
         fetchError:
           'Google Calendar からイベントを読み込めませんでした。カレンダー設定を確認するか、後でもう一度お試しください。',
         emptyTitle: '該当するイベントがありません',
         emptyBody: '検索キーワードを変更してみてください。',
-        search: 'イベント検索',
+        search: 'イベントを探す',
         searchPlaceholder: 'キーワードで検索',
         category: 'カテゴリ',
         all: 'すべて',
         dateFilter: '日付',
-        allDates: 'すべての日付',
+        allDates: 'すべて',
         today: '今日',
         thisWeek: '今週',
         thisMonth: '今月',
-        customRange: '期間指定',
+        customRange: '期間を指定',
         startDate: '開始日',
         endDate: '終了日',
-        savedCount_one: '保存済みイベントが {{count}} 件あります。',
-        savedCount_other: '保存済みイベントが {{count}} 件あります。',
+        savedCount_one: '保存したイベントが {{count}} 件あります。',
+        savedCount_other: '保存したイベントが {{count}} 件あります。',
         noSavedBody: '気になるイベントは保存して、あとから簡単に確認できます。',
-        save: 'イベントを保存',
+        save: '保存する',
         saved: '保存済み',
         removeSaved: '削除',
         addToCalendar: 'カレンダーに追加',
       },
       exchange: {
-        eyebrow: '交換留学・留学案内',
-        title: '交換留学生や留学を考えている人のためのページです。',
+        eyebrow: '留学・交換留学',
+        title: 'UW-Madisonへの留学を考えている方へ',
         description:
-          'このページは、これから UW-Madison に来る交換留学生や、将来の留学を考えている学生に向けて、JSA やキャンパスでのつながり方を紹介するためのものです。',
+          'これからUW-Madisonへ来る交換留学生や、アメリカ留学を検討している学生に向けて、準備や現地でのつながり方をまとめています。',
         considering: {
-          eyebrow: 'UW-Madisonを検討中',
-          heroHeadline: '米国トップクラスの州立大学で学び、安心できるコミュニティにつながる。',
-          whyTitle: 'Why UW-Madison',
+          eyebrow: '留学先として検討する',
+          heroHeadline: '学びも生活も充実。　　UW-Madisonでの留学。',
+          whyTitle: 'UW-Madisonが選ばれる理由',
           whyBody:
-            'UW-Madison は、学問の質と現実的な学生生活の両方を重視したい人に向いています。評価の高い学部、研究機会、そして大きな学生コミュニティがあり、留学生でも早い段階でつながりを作りやすい環境です。',
-          pillar1Title: '全米上位の公立大学',
-          pillar1Body: '米国の公立大学ランキングで継続的に高く評価されています。',
-          pillar2Title: '学問と研究の強さ',
-          pillar2Body: '上位プログラムと研究・実践型の学習機会が豊富です。',
-          pillar3Title: '活発な学生コミュニティ',
-          pillar3Body: '学生団体やイベントが多く、仲間づくりの機会があります。',
-          pillar4Title: '魅力的なキャンパス環境',
-          pillar4Body: '湖に囲まれた景観と、学生が暮らしやすい大学都市です。',
-          quickFactsTitle: 'Quick Facts',
+            'UW-Madisonは、学問の質も学生生活の充実も大切にしたい人に向いています。評価の高いプログラム、活発な研究環境、そして多くの学生が集まるキャンパスがあり、留学生でも早い段階で居場所を見つけやすい大学です。',
+          pillar1Title: '全米でも評価の高い公立大学',
+          pillar1Body: '米国の公立大学として、各種ランキングで安定して高い評価を受けています。',
+          pillar2Title: '研究と実践に強い学び',
+          pillar2Body: '研究室、プロジェクト型授業、デザインチームなど、授業外で学びを深める機会も豊富です。',
+          pillar3Title: '人と出会いやすいキャンパス',
+          pillar3Body: '学生団体やイベントが多く、留学生でもコミュニティを見つけやすい環境です。',
+          pillar4Title: '湖と街に囲まれた学生生活',
+          pillar4Body: '湖畔のキャンパスと暮らしやすい州都マディソンで、学業と生活の両方を楽しめます。',
+          quickFactsTitle: '基本情報',
           quickFact1:
-            'U.S. News の2026年版では、全米総合で約36位、公立大学で約12位に位置づけられています。',
+            '2026年版U.S. Newsでは、全米総合で約36位、公立大学で約12位にランクされています。',
           quickFact1b:
-            '全米公立大学の上位校として安定した評価を得ています（U.S. News 2026）。',
+            '全米の公立大学の中でも、継続して高い評価を受けている大学です。',
           quickFact2:
-            'Computer Science は、公立大学の中でトップ10前後（UW/CDIS の最新更新で9位）です。',
+            '教育学は全米の大学の中で常に１位前後に位置しています。（2026年版U.S. NewsにてBest Education Schoolを獲得）',
           quickFact4:
-            '大規模大学なので、授業選択や学生団体、支援制度は豊富です。一方で人気科目は早めの計画が必要です。',
+            '大規模大学のため、科目・学生団体・大学の支援制度が充実しています。人気科目は早めの準備が安心です。',
           quickFact5:
-            'ウィスコンシン州マディソンは、安全性と生活のしやすさで評価される州都です。',
-          academicsTitle: 'Academics',
+            'マディソンはウィスコンシン州の州都で、米国屈指の治安の良さとと学生が暮らしやすい街として知られています。',
+          academicsTitle: '学びの環境',
           academicsBody:
-            'Computer Science、Engineering、Business などは特に強く、研究室参加、チーム活動、キャリア系イベントの機会があります。現実的には、基礎科目は難易度が高く、導入科目は大人数になりがちです。オフィスアワーや学習グループ、アドバイジングを早めに使うことで十分対応できます。',
-          studentLifeTitle: 'Student Life',
+            '教育学、コンピュータサイエンス、工学、ビンネスなどの分野に強く、研究室、チーム活動、キャリア関連イベントに参加する機会もあります。基礎科目は難しく、導入科目は大人数になることもありますが、オフィスアワーや学習グループ、アドバイザーを早めに活用すれば十分に対応できます。',
+          studentLifeTitle: '現地での暮らし',
           studentLifeBody:
-            '住居費は場所と住み方で変わりますが、家賃は月 $800-$1,500 程度で見積もる学生が多いです。食費は計画次第で調整しやすく、学内外の選択肢も豊富です。マディソンの冬は本格的で、雪・強風・氷点下の日が続くため、防寒着・ブーツ・重ね着は必須です。',
-          whyJsaTitle: 'Why JSA',
+            '住居費は場所や住み方によって変わりますが、家賃は月$800-$1,500程度で見積もる学生が多いです。食費は計画次第で調整しやすく、学内外の選択肢も豊富です。マディソンの冬は本格的で、雪・強風・氷点下の日が続くため、防寒着、ブーツ、重ね着は欠かせません。',
+          whyJsaTitle: 'JSAでできること',
           whyJsaBody:
-            'JSA は、交換留学生・留学生が早く人とつながり、実務的な相談をしやすくし、最初の数か月の孤立感を減らすためのコミュニティです。イベント参加から日常の相談まで、一人で抱え込まなくてよい環境を作れます。',
-          voicesTitle: 'Student Voices',
+            'JSAは、交換留学生や留学生が早く人とつながり、生活のことを気軽に相談できるコミュニティです。イベント参加から日常のちょっとした相談まで、一人で抱え込まなくてよい環境をつくっています。',
+          voicesTitle: '留学生の声',
           voice1:
             '「最初の学期は学業が大変でしたが、学生団体に入ってからマディソンでの生活がぐっと身近になりました。」',
           voice2:
             '「冬は想像以上でしたが、防寒をそろえたら生活はかなり楽になりました。」',
           voice3:
             '「授業は厳しいですが、実践的な力と英語で議論する自信がつきました。」',
-          ctaEyebrow: 'Next Step',
-          ctaTitle: '方向性が合いそうなら、早めに準備を始めましょう。',
+          ctaEyebrow: '次にすること',
+          ctaTitle: '興味が固まってきたら、早めに準備を始めましょう。',
           ctaBody:
-            '履修目標、予算、気候への適性を整理したうえで、次は「UW-Madison 渡航準備」ページで具体的なチェック項目を確認してください。',
-          ctaTip:
-            '判断の目安: 学業重視で、活発な大規模キャンパス環境に前向きなら、UW-Madison は現実的に良い選択肢です。',
+            '履修したい科目、予算、気候への不安などを整理したら、「渡航前の準備」ページで具体的なチェック項目を確認してみてください。',
         },
-        subnavConsidering: 'UW-Madisonを検討中',
-        subnavPreparing: 'UW-Madison 渡航準備',
-        subnavArriving: 'マディソン到着後',
-        subnavResources: '在学生向け / リソース',
-        preparingEyebrow: '渡航前の準備',
-        preparingTitle: 'UW-Madison 渡航準備',
+        subnavConsidering: '留学先として検討する',
+        subnavPreparing: '渡航前の準備',
+        subnavArriving: '到着後の生活',
+        subnavResources: '在学生向け情報',
+        preparingEyebrow: '出発前に確認',
+        preparingTitle: '渡航前に準備しておきたいこと',
         preparingDescription:
-          '住居、履修、ビザ、到着後の支援先など、早めに準備すべき内容を整理しておくと安心です。',
-        preparingHousingTitle: 'Housing',
+          '住まい、履修、ビザ、お金、到着後の相談先などを早めに整理しておきましょう。',
+        preparingHousingTitle: '住まい探し',
         preparingHousingBody:
           '住居探しは早めに始めるのがおすすめです。学内寮と学外物件を比較し、入居日、契約条件、通学時間まで確認してから決めましょう。',
-        preparingCoursesTitle: 'Courses',
+        preparingCoursesTitle: '履修計画',
         preparingCoursesBody:
           '所属大学の要件と照らし合わせて履修計画を立てましょう。人気科目はすぐ埋まることがあるため、登録開始前に代替案を用意しておくと安心です。',
-        preparingVisaTitle: 'Visa',
+        preparingVisaTitle: 'ビザ・必要書類',
         preparingVisaBody:
           'DS-2019/I-20 の発行、面接予約、入国期限までを時系列で管理しましょう。重要書類はデータと紙の両方で保管しておくのが安全です。',
-        preparingFinanceTitle: 'Finance',
+        preparingFinanceTitle: 'お金の準備',
         preparingFinanceBody:
           '家賃、食費、交通費、教材費、防寒用品を含めた月次予算を作りましょう。米国での口座・カード手数料・緊急出費への備えも確認しておくと安心です。',
-        preparingEssentialsTitle: 'Essentials',
+        preparingEssentialsTitle: '生活必需品',
         preparingEssentialsBody:
           '出発前に、保険の確認、常備薬、防寒着、SIMプラン、到着後すぐ使う連絡先を準備しておくと初月が安定します。',
-        arrivingEyebrow: '到着後の立ち上げ',
-        arrivingTitle: 'マディソン到着後',
+        arrivingEyebrow: '到着してから',
+        arrivingTitle: 'マディソンでの生活を始める',
         arrivingDescription:
-          '最初の数週間で生活リズムと人間関係を整え、イベントやコミュニティにつながることで適応しやすくなります。',
-        resourcesEyebrow: '実用リソース',
-        resourcesTitle: '在学生向け / リソース',
+          '最初の数週間は、生活リズムを整えながら、授業・住まい・コミュニティの土台を少しずつ作っていきましょう。',
+        firstWeeksTitle: '最初の数週間にすること',
+        firstWeeksBody:
+          '到着直後は、生活に必要な手続きや移動方法、授業の流れを少しずつ確認していけば大丈夫です。最初からすべて完璧にこなす必要はありません。困ったときに相談できる人や、安心して立ち寄れる場所を早めに見つけておくと、生活がぐっと落ち着きます。',
+        campusLifeTitle: 'キャンパスに慣れる',
+        campusLifeBody:
+          '授業の建物、図書館、食事ができる場所、バスの乗り方、学生向けサービスなどを少しずつ把握していきましょう。毎日の動き方が見えてくると、キャンパスが一気に身近になります。',
+        communityTitle: '居場所を見つける',
+        communityBody:
+          '学生団体、日本語・英語の会話イベント、文化イベントは、知り合いを増やすきっかけになります。JSAのイベントも、まず誰かとつながりたいときに気軽に参加できる場です。',
+        languageTitle: '言語面のサポート',
+        languageBody:
+          '英語を練習したい人も、日本語を使いたい人も、会話を通じたイベントに参加することで、自然に自信をつけていけます。',
+        resourcesEyebrow: '困ったときのリンク集',
+        resourcesTitle: '在学生向け情報',
         resourcesDescription:
-          'イベント情報、FAQ、キャリア情報、お問い合わせを活用して、必要な支援へすぐにアクセスできます。',
+          'イベント情報、FAQ、キャリア関連情報、お問い合わせ先をまとめています。必要な情報にすぐアクセスできます。',
+        ctaEvents: 'イベントを見る',
+        ctaFaq: 'FAQを見る',
+        ctaContact: 'JSAに問い合わせる',
         beforeArrivalBody:
           '住居、履修、ビザの準備に加えて、到着後にどんなコミュニティとつながりたいかを考えておくと安心です。',
         supportBody:
@@ -562,29 +588,29 @@ const resources = {
       },
       faq: {
         eyebrow: 'FAQ',
-        title: 'よくある質問',
+        title: '参加前によくある質問',
         description:
-          'ここに記載のない質問はお気軽にお問い合わせください。',
-        q1: 'JSA にはどのような人が参加していますか？',
-        a1: 'この団体には、学部生と大学院生・専門職大学院生の両方が参加しています。JSA のメンバーには、日系アメリカ人、日本からの留学生、交換留学生、日本人以外の学生も含まれています。JSA に興味のある方であれば、どなたでも歓迎しています。',
+          'JSAへの参加やイベントについて、よくある質問をまとめました。',
+        q1: 'JSAには誰が参加できますか？',
+        a1: '学部生、大学院生、専門職大学院生、日系アメリカ人の学生、日本からの留学生、交換留学生、日本にルーツのない学生など、さまざまな人が参加しています。JSAに興味がある方なら、どなたでも歓迎です。',
         q2: '入会条件などはありますか？',
-        a2: 'この団体はウィスコンシン大学マディソン校のすべての学生の参加を歓迎しております。日本人である必要も、日本語を話せる必要もありません。現在、会費は必要ありません。また、入会制度などは特になく、特定のイベントやミーティングへの参加も必須ではありません。',
-        q3: '日本語を話せなかったり、日本人でなくても、JSA に参加できますか？',
-        a3: 'もちろんです。JSA は、言語能力やアイデンティティに関わらず、すべての学生のための団体を目指しています。不安なことがあれば、気軽にご連絡ください。',
-        q4: 'JSAはどのくらいの頻度でイベントを実施していますか？',
-        a4: '秋学期と春学期に隔週でイベントを開催しています。Instagram、メール、または今後のイベントページをチェックしていただければ、最新のイベント情報を確認できます。',
+        a2: 'UW-Madisonの学生であれば、どなたでも参加できます。日本人である必要も、日本語を話せる必要もありません。現在、会費や正式な入会手続きはなく、参加必須のイベントもありません。',
+        q3: '日本語を話せなくても、日本にルーツがなくても参加できますか？',
+        a3: 'もちろんです。JSAは、背景や言語レベルに関係なく参加できる団体です。自分が参加してよいか迷う場合も、気軽にご連絡ください。',
+        q4: 'JSAのイベントはどのくらいの頻度でありますか？',
+        a4: '秋学期と春学期は、基本的に隔週でイベントを開催しています。最新情報はInstagram、メール、イベントページでお知らせしています。',
         q5: '初めてイベントに参加するにはどうすればよいですか？学期の途中からでも参加できますか？',
-        a5: 'どの時期からでもイベントに参加できます。ウェブサイト、Instagram、メールなどから、イベントの開催場所や日時を確認することが可能です。無理のない範囲でご気軽にご参加ください。JSAは、新しいメンバーの皆様をいつでも歓迎しています。参加するのが不安な場合は、メールや Instagram でご連絡していただければ、さらに詳細にご案内できます。',
-        q6: 'JSA ではどのようなイベントを開催していますか？',
-        a6: 'JSA では、日本文化の紹介とマディソンの学生のためのさまざまなイベントを開催しています。日本食に関するイベント、映画鑑賞会、マディソン周辺へのお出かけ、日本の季節行事など、幅広い内容となっています。また、春祭りのような毎年恒例のイベントもあります。また、日本への就職希望者に向けた支援イベントもあります。（一部日本語能力が参加条件となるものもあります。）詳しくは イベントページをご覧ください。',
+        a5: '学期の途中からでも、いつでも参加できます。イベントの日時や場所は、ウェブサイト、Instagram、メールなどで案内しています。初めてで不安な場合は、事前にメールやInstagramで連絡していただければ、参加しやすいようにご案内します。',
+        q6: 'どんなイベントを開催していますか？',
+        a6: '日本食イベント、映画鑑賞会、マディソン周辺へのお出かけ、日本の季節行事、春祭りなど、さまざまなイベントを行っています。日本での就職に関心のある学生向けのキャリアイベントもあります。詳しくはイベントページをご覧ください。',
         q7: 'JSAのアドバイザーは誰ですか？',
         a7: '東アジア言語文学科 日本語学・言語学分野の Naomi Geyer 准教授です。',
       },
       careers: {
         eyebrow: 'キャリア',
-        title: '日本に関わる進路を考える学生向けのキャリア支援です。',
+        title: '日本につながるキャリアを考える',
         description:
-          'JSA では、日本に関わるキャリアに興味のある学生に向けて、機会の共有、イベントの開催、外部団体とのつながりづくりを通じたサポートを行っています。',
+          '日本に関わる進路や就職に関心のある学生へ、イベントや外部団体の情報を紹介しています。',
         jelperClubTitle: 'Jelper Club',
         jelperClubBody:
           '日本語力に関係なく、日本でのキャリア形成や本格的な文化体験に関心のある優秀な学生を支援するプラットフォームです。（正規生のみ対象）',
@@ -606,16 +632,16 @@ const resources = {
       },
       contact: {
         eyebrow: 'お問い合わせ',
-        title: '質問やコラボ提案、イベント参加の相談はこちらから。',
+        title: '質問・連携のご相談はこちら',
         description:
-          '入会、イベント、コラボレーション、スポンサーシップ、その他のご質問はこちらのフォームからお問い合わせください。',
-        formFallback: '上記のフォームがうまく動かない場合は、元の Google Form を新しいタブで開いてください。',
+          '入会、イベント参加、団体連携、スポンサーシップなどに関するお問い合わせを受け付けています。',
+        formFallback: 'フォームが表示されない場合は、Google Formを新しいタブで開いてください。',
         openForm: 'Google Form を開く',
         successTitle: 'お問い合わせありがとうございます。',
-        successBody: 'JSA の Google Form に送信されました。',
+        successBody: 'お問い合わせ内容を送信しました。',
         submitFrameTitle: 'Google Form 送信用フレーム',
         draft:
-          'このフォームはローカルに下書きを保存するため、リロードしても入力内容が消えにくくなっています。',
+          '入力内容はこの端末に一時保存されます。ページを再読み込みしても、すぐには消えません。',
         name: '名前',
         email: 'メールアドレス',
         affiliation: '所属',
@@ -624,7 +650,7 @@ const resources = {
         message: 'メッセージ',
         placeholderName: 'お名前',
         placeholderEmail: 'name@wisc.edu',
-        placeholderAffiliation: 'UW-Madison 学生、団体名、企業名など',
+        placeholderAffiliation: 'UW-Madisonの学生、団体名、企業名など',
         placeholderSubject: 'お問い合わせの件名',
         placeholderMessage: 'どのようなご相談ですか？',
         selectPlaceholder: '選択してください',
@@ -633,7 +659,7 @@ const resources = {
         inquiryOptions: {
           general: '一般的な質問',
           eventParticipation: 'イベント参加',
-          collaboration: '企業・団体連携 / スポンサーシップ',
+          collaboration: '団体連携・スポンサーシップ',
           membership: '入会について',
           other: 'その他',
         },
