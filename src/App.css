@@ -1153,6 +1153,8 @@
   }
 
   .considering-hero-overlay {
+    position: static;
+    inset: auto;
     max-width: 100%;
     padding: 1.1rem;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72) 78%);
