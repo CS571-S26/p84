@@ -586,66 +586,184 @@
 }
 
 .considering-page {
-  max-width: 980px;
+  max-width: 1220px;
   margin: 0 auto;
+  display: grid;
+  gap: 1.2rem;
 }
 
-.considering-hero {
-  padding: 1.1rem 1.1rem 1.3rem;
+.considering-hero-banner {
+  position: relative;
+  min-height: 360px;
+  border-radius: 26px;
+  overflow: hidden;
   border: 1px solid rgba(18, 18, 18, 0.08);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.95);
   box-shadow: var(--uw-shadow);
-}
-
-.considering-heading {
-  margin-top: 0.1rem;
-  margin-bottom: 0.45rem;
 }
 
 .considering-hero-image {
   width: 100%;
-  max-height: 420px;
+  height: 100%;
   object-fit: cover;
-  object-position: center 56%;
-  border: 1px solid rgba(18, 18, 18, 0.08);
+  object-position: center 58%;
 }
 
-.considering-section {
-  padding: 1.1rem 0;
-  border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+.considering-hero-overlay {
+  position: absolute;
+  inset: 0;
+  max-width: 52%;
+  padding: 2.1rem 2.1rem 1.6rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.74) 62%, rgba(255, 255, 255, 0));
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+
+.considering-hero-title {
+  margin: 0;
+  color: var(--uw-black);
+  font-size: clamp(2rem, 4.2vw, 4.2rem);
+  line-height: 1.03;
+}
+
+.considering-hero-cta {
+  width: fit-content;
 }
 
 .considering-title {
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.75rem;
   color: var(--uw-red);
-  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
   font-weight: 800;
 }
 
-.considering-list {
-  display: grid;
-  gap: 0.7rem;
-  padding-left: 1.2rem;
-  margin: 0;
+.considering-panel {
+  padding: 1.35rem;
+  border-radius: 22px;
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  background: rgba(255, 255, 255, 0.97);
 }
 
-.considering-list li {
-  line-height: 1.68;
-  color: rgba(18, 18, 18, 0.86);
+.considering-why-layout {
+  display: grid;
+  gap: 1rem 1.2rem;
+  grid-template-columns: 1.1fr 1.9fr;
+  align-items: start;
+}
+
+.considering-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.considering-pillars article {
+  text-align: center;
+  padding: 0.35rem 0.5rem;
+  border-left: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+.considering-pillars article:first-child {
+  border-left: 0;
+}
+
+.considering-pillars span {
+  font-size: 1.25rem;
+}
+
+.considering-pillars h4 {
+  margin: 0.32rem 0 0.26rem;
+  font-size: 0.99rem;
+  line-height: 1.35;
+}
+
+.considering-pillars p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: rgba(18, 18, 18, 0.7);
 }
 
 .considering-facts {
-  padding: 1.15rem;
-  border: 1px solid rgba(18, 18, 18, 0.08);
-  border-radius: 20px;
   background: rgba(247, 248, 249, 0.86);
+}
+
+.considering-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.considering-facts-grid article {
+  padding: 0.9rem 0.95rem;
+  border-radius: 14px;
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.considering-facts-grid h4 {
+  margin: 0 0 0.35rem;
+  color: var(--uw-red);
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.considering-facts-grid p {
+  margin: 0;
+  color: rgba(18, 18, 18, 0.76);
+  font-size: 0.88rem;
+  line-height: 1.52;
+}
+
+.considering-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.considering-feature-card {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  background: rgba(255, 255, 255, 0.97);
+  display: grid;
+}
+
+.considering-feature-image {
+  min-height: 170px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+.considering-feature-image-academics {
+  background-image: linear-gradient(145deg, rgba(18, 18, 18, 0.12), rgba(197, 5, 12, 0.2)), url('/src/assets/bascom_hill.jpg');
+}
+
+.considering-feature-image-life {
+  background-image: linear-gradient(145deg, rgba(18, 18, 18, 0.14), rgba(197, 5, 12, 0.16)), url('/src/assets/home_background.jpg');
+}
+
+.considering-feature-image-jsa {
+  background-image: linear-gradient(145deg, rgba(18, 18, 18, 0.16), rgba(197, 5, 12, 0.24));
+}
+
+.considering-feature-card .considering-title {
+  margin: 0.95rem 1rem 0.45rem;
+  color: var(--uw-red);
+  font-size: 2rem;
+}
+
+.considering-feature-card .section-description {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
 }
 
 .considering-voices {
   list-style: none;
   display: grid;
-  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
   padding: 0;
   margin: 0;
 }
@@ -664,6 +782,23 @@
   border: 1px solid rgba(197, 5, 12, 0.16);
   background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--uw-shadow);
+}
+
+.considering-cta-actions {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.considering-cta-actions span {
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid rgba(18, 18, 18, 0.1);
+  background: rgba(255, 255, 255, 0.94);
+  padding: 0.68rem 0.55rem;
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
 .accordion-button:not(.collapsed) {
@@ -916,12 +1051,32 @@
     flex-direction: column;
   }
 
-  .considering-hero {
-    padding: 0.9rem 0.9rem 1.1rem;
+  .considering-hero-banner {
+    min-height: 300px;
   }
 
-  .considering-facts,
-  .considering-cta {
-    padding: 1rem;
+  .considering-hero-overlay {
+    max-width: 100%;
+    padding: 1.15rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72));
+  }
+
+  .considering-why-layout,
+  .considering-pillars,
+  .considering-facts-grid,
+  .considering-feature-grid,
+  .considering-voices,
+  .considering-cta-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .considering-pillars article {
+    border-left: 0;
+    border-top: 1px solid rgba(18, 18, 18, 0.08);
+    padding-top: 0.7rem;
+  }
+
+  .considering-pillars article:first-child {
+    border-top: 0;
   }
 }
