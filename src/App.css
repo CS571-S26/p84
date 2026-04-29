@@ -621,6 +621,21 @@
   height: auto;
 }
 
+/* Accessibility override for embedded Instagram widget buttons */
+.eapps-instagram-feed-posts-grid-load-more-text,
+.eapps-instagram-feed-posts-grid-load-more-text-visible {
+  color: #ffffff !important;
+  background-color: #0057b8 !important;
+}
+
+.eapps-instagram-feed-posts-grid-load-more-text:hover,
+.eapps-instagram-feed-posts-grid-load-more-text-visible:hover,
+.eapps-instagram-feed-posts-grid-load-more-text:focus,
+.eapps-instagram-feed-posts-grid-load-more-text-visible:focus {
+  color: #ffffff !important;
+  background-color: #004a9c !important;
+}
+
 .considering-hero-overlay {
   position: absolute;
   inset: 0;
