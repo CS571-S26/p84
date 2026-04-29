@@ -272,6 +272,7 @@ function EventsPage() {
           <EventCard
             key={getEventKey(event)}
             event={event}
+            eventKey={getEventKey(event)}
             isSaved={savedIds.includes(getEventKey(event))}
             onToggleSave={handleToggleSave}
           />

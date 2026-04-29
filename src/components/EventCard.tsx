@@ -5,13 +5,13 @@ import type { EventItem } from '../data/events'
 
 type EventCardProps = {
   event: EventItem
+  eventKey: string
   isSaved: boolean
   onToggleSave: (eventId: string) => void
 }
 
-function EventCard({ event, isSaved, onToggleSave }: EventCardProps) {
+function EventCard({ event, eventKey, isSaved, onToggleSave }: EventCardProps) {
   const { t } = useTranslation()
-  const eventId = event.id ?? event.title
 
   return (
     <Card className="event-list-card">
@@ -28,7 +28,7 @@ function EventCard({ event, isSaved, onToggleSave }: EventCardProps) {
             <div className="event-date">{event.date}</div>
             <Button
               variant={isSaved ? 'danger' : 'outline-danger'}
-              onClick={() => onToggleSave(eventId)}
+              onClick={() => onToggleSave(eventKey)}
             >
               {isSaved ? t('events.saved') : t('events.save')}
             </Button>
