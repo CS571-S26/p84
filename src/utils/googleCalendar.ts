@@ -1,4 +1,5 @@
 import type { EventItem } from '../data/events'
+type CalendarEventItem = Omit<EventItem, 'category'>
 
 type GoogleCalendarDate = {
   date?: string
@@ -72,7 +73,7 @@ const createGoogleCalendarUrl = (event: GoogleCalendarEvent, start: Date, end: D
   return `https://calendar.google.com/calendar/render?${params.toString()}`
 }
 
-const toEventItem = (event: GoogleCalendarEvent, locale: string): EventItem | null => {
+const toEventItem = (event: GoogleCalendarEvent, locale: string): CalendarEventItem | null => {
   const start = getEventDate(event.start)
 
   if (!start) {
@@ -131,5 +132,5 @@ export const fetchGoogleCalendarEvents = async ({
 
   return (data.items ?? [])
     .map((event) => toEventItem(event, locale))
-    .filter((event): event is EventItem => event !== null)
+    .filter((event): event is CalendarEventItem => event !== null)
 }
