@@ -167,15 +167,27 @@ const resources = {
           whyTitle: 'Why UW-Madison',
           whyBody:
             'UW-Madison is a strong choice if you want both academic quality and a realistic student life. You get globally recognized programs, active research opportunities, and a large campus community where international students can find peers quickly.',
+          pillar1Title: 'Top-Ranked Public University',
+          pillar1Body: 'Consistently recognized among the strongest U.S. public universities.',
+          pillar2Title: 'Strong Academics & Research',
+          pillar2Body: 'Leading programs with research labs and project-based learning.',
+          pillar3Title: 'Vibrant Community',
+          pillar3Body: 'A large student network with active organizations and events.',
+          pillar4Title: 'Beautiful Campus & Location',
+          pillar4Body: 'Lakeside campus life in a safe and student-friendly college city.',
           quickFactsTitle: 'Quick Facts',
           quickFact1:
             'Ranked around #36 overall and #12 among U.S. public universities (U.S. News, 2026 ranking release).',
+          quickFact1b:
+            'Top public school standing in national rankings (U.S. News, 2026).',
           quickFact2:
             'Computer Science is ranked around top 10 among U.S. public universities (#9 in the latest UW/CDIS ranking update).',
           quickFact3:
             'These rankings matter because they usually reflect research strength, faculty quality, and employer reputation, which affect your classes, projects, and internship access.',
           quickFact4:
             'Large university scale means many course choices, student organizations, and campus resources, but you should expect to plan early for popular classes.',
+          quickFact5:
+            'Madison, Wisconsin is a safe, student-focused capital city with strong quality of life.',
           academicsTitle: 'Academics',
           academicsBody:
             'Strong options include Computer Science, Engineering, and Business, with opportunities to join labs, design teams, and career-focused events. Be realistic: some gateway courses are challenging, and intro classes can be large. If you use office hours, study groups, and advising early, it is manageable and worth it.',
@@ -509,15 +521,27 @@ const resources = {
           whyTitle: 'Why UW-Madison',
           whyBody:
             'UW-Madison は、学問の質と現実的な学生生活の両方を重視したい人に向いています。評価の高い学部、研究機会、そして大きな学生コミュニティがあり、留学生でも早い段階でつながりを作りやすい環境です。',
+          pillar1Title: '全米上位の公立大学',
+          pillar1Body: '米国の公立大学ランキングで継続的に高く評価されています。',
+          pillar2Title: '学問と研究の強さ',
+          pillar2Body: '上位プログラムと研究・実践型の学習機会が豊富です。',
+          pillar3Title: '活発な学生コミュニティ',
+          pillar3Body: '学生団体やイベントが多く、仲間づくりの機会があります。',
+          pillar4Title: '魅力的なキャンパス環境',
+          pillar4Body: '湖に囲まれた景観と、学生が暮らしやすい大学都市です。',
           quickFactsTitle: 'Quick Facts',
           quickFact1:
             'U.S. News の2026年版では、全米総合で約36位、公立大学で約12位に位置づけられています。',
+          quickFact1b:
+            '全米公立大学の上位校として安定した評価を得ています（U.S. News 2026）。',
           quickFact2:
             'Computer Science は、公立大学の中でトップ10前後（UW/CDIS の最新更新で9位）です。',
           quickFact3:
             'こうした順位は、研究力・教員の質・就職面での評価を反映しやすく、授業やプロジェクト、インターン機会に直結しやすい点が重要です。',
           quickFact4:
             '大規模大学なので、授業選択や学生団体、支援制度は豊富です。一方で人気科目は早めの計画が必要です。',
+          quickFact5:
+            'ウィスコンシン州マディソンは、安全性と生活のしやすさで評価される州都です。',
           academicsTitle: 'Academics',
           academicsBody:
             'Computer Science、Engineering、Business などは特に強く、研究室参加、チーム活動、キャリア系イベントの機会があります。現実的には、基礎科目は難易度が高く、導入科目は大人数になりがちです。オフィスアワーや学習グループ、アドバイジングを早めに使うことで十分対応できます。',
