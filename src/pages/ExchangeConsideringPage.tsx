@@ -1,6 +1,6 @@
 import Alert from 'react-bootstrap/Alert'
 import { useTranslation } from 'react-i18next'
-import bascomHill from '../img/bascom_hill.jpg'
+import bascomHill from '../assets/bascom_hill.jpg'
 
 function ExchangeConsideringPage() {
   const { t } = useTranslation()
