@@ -595,7 +595,7 @@
 
 .considering-hero-banner {
   position: relative;
-  min-height: 250px;
+  min-height: 125px;
   border-radius: 26px;
   overflow: hidden;
   border: 1px solid rgba(18, 18, 18, 0.08);
@@ -1053,7 +1053,7 @@
   }
 
   .considering-hero-banner {
-    min-height: 200px;
+    min-height: 100px;
   }
 
   .considering-hero-overlay {
