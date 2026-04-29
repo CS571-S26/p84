@@ -1,4 +1,3 @@
-import Alert from 'react-bootstrap/Alert'
 import { useTranslation } from 'react-i18next'
 import bascomHill from '../assets/bascom_hill.jpg'
 
