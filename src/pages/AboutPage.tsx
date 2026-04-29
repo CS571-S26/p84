@@ -74,7 +74,7 @@ function AboutPage() {
           <div className="community-stats-column">
             {stats.map((stat) => (
               <div className="stat-card">
-                <p className="stat-value">{stat.value}</p>
+                <h3 className="stat-value">{stat.value}</h3>
                 <h3 className="stat-label">{stat.label}</h3>
                 <p className="stat-context">{stat.context}</p>
               </div>
