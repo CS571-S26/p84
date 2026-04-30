@@ -3,11 +3,12 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { useTranslation } from 'react-i18next'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
 function NavigationBar() {
   const { i18n, t } = useTranslation()
+  const location = useLocation()
   const navItems = [
     { to: '/', label: t('nav.home') },
     { to: '/about', label: t('nav.about') },
@@ -27,7 +28,12 @@ function NavigationBar() {
   }
 
   return (
-    <Navbar expand="lg" className="site-navbar" sticky="top">
+    <Navbar
+      key={location.pathname}
+      expand="lg"
+      className="site-navbar"
+      sticky="top"
+    >
       <Container className="navbar-shell">
         <div className="navbar-brand-row">
           <div className="navbar-side-spacer" aria-hidden="true" />

@@ -12,6 +12,11 @@
   --uw-surface: #f7f8f9;
   --uw-border: rgba(18, 18, 18, 0.12);
   --uw-shadow: 0 16px 36px rgba(18, 18, 18, 0.08);
+  --motion-fast: 180ms;
+  --motion-medium: 320ms;
+  --motion-slow: 620ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

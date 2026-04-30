@@ -6,7 +6,8 @@ import homeBackground from '../assets/home_background.jpg'
 import SectionCard from '../components/SectionCard'
 
 function HomePage() {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
+  const isJapanese = i18n.resolvedLanguage === 'ja'
 
   return (
     <div className="d-grid gap-5">
@@ -16,7 +17,9 @@ function HomePage() {
       >
         <div className="home-hero-content">
           <p className="eyebrow">{t('home.eyebrow')}</p>
-          <h1>{t('home.title')}</h1>
+          <h1 className={isJapanese ? 'home-hero-title home-hero-title-ja' : 'home-hero-title'}>
+            {t('home.title')}
+          </h1>
           <p className="hero-copy">{t('home.description')}</p>
           <div className="d-flex flex-wrap gap-3">
             <Link to="/events" className="cta-link cta-primary">

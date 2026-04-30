@@ -9,21 +9,23 @@ function NewsletterSignup() {
 
   return (
     <section className="newsletter-band">
-      <Container className="newsletter-card">
-        <div className="newsletter-copy">
-          <p className="section-kicker">{t('newsletter.eyebrow')}</p>
-          <h2 className="newsletter-title">{t('newsletter.title')}</h2>
-          <p className="newsletter-description">{t('newsletter.description')}</p>
+      <Container>
+        <div className="newsletter-card">
+          <div className="newsletter-copy">
+            <p className="section-kicker">{t('newsletter.eyebrow')}</p>
+            <h2 className="newsletter-title">{t('newsletter.title')}</h2>
+            <p className="newsletter-description">{t('newsletter.description')}</p>
+          </div>
+          <Button
+            as="a"
+            href={newsletterUrl}
+            target="_blank"
+            rel="noreferrer"
+            variant="danger"
+          >
+            {t('newsletter.button')}
+          </Button>
         </div>
-        <Button
-          as="a"
-          href={newsletterUrl}
-          target="_blank"
-          rel="noreferrer"
-          variant="danger"
-        >
-          {t('newsletter.button')}
-        </Button>
       </Container>
     </section>
   )
