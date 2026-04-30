@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import { useTranslation } from 'react-i18next'
@@ -5,9 +6,23 @@ import { Link } from 'react-router-dom'
 import homeBackground from '../assets/home_background.jpg'
 import SectionCard from '../components/SectionCard'
 
+const elfsightScriptId = 'elfsight-platform-script'
+
 function HomePage() {
   const { i18n, t } = useTranslation()
   const isJapanese = i18n.resolvedLanguage === 'ja'
+
+  useEffect(() => {
+    if (document.getElementById(elfsightScriptId)) {
+      return
+    }
+
+    const script = document.createElement('script')
+    script.id = elfsightScriptId
+    script.src = 'https://elfsightcdn.com/platform.js'
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
 
   return (
     <div className="d-grid gap-5">
@@ -52,11 +67,19 @@ function HomePage() {
               body={t('home.careerBody')}
             />
           </Col>
-		  
         </Row>
       </section>
-	<script src="https://elfsightcdn.com/platform.js" async></script>
-	<div className="elfsight-app-2e2ea4a1-8e3f-4680-9b96-6e9bb86fd82f" data-elfsight-app-lazy></div>
+
+      <section className="instagram-section" aria-label="Instagram">
+        <div className="instagram-card">
+          <div className="instagram-feed-frame">
+            <div
+              className="elfsight-app-2e2ea4a1-8e3f-4680-9b96-6e9bb86fd82f instagram-feed"
+              data-elfsight-app-lazy
+            />
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

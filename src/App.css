@@ -367,6 +367,7 @@
 .saved-event-card,
 .custom-contact-form,
 .exchange-links-card,
+.instagram-card,
 .considering-panel,
 .considering-feature-card,
 .considering-cta,
@@ -714,6 +715,39 @@
   margin-top: 1rem;
 }
 
+.instagram-section {
+  width: 100%;
+}
+
+.instagram-card {
+  padding: 1rem;
+  border: 1px solid var(--uw-border);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 248, 249, 0.96)),
+    var(--uw-white);
+  box-shadow: var(--uw-shadow);
+  overflow: hidden;
+}
+
+.instagram-feed-frame {
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.instagram-feed {
+  width: 100%;
+  min-height: 420px;
+}
+
+.instagram-feed-frame > .instagram-feed,
+.instagram-feed-frame iframe {
+  border-radius: 18px;
+}
+
 .considering-page {
   width: 100%;
   max-width: none;
@@ -738,10 +772,41 @@
 }
 
 /* Accessibility override for embedded Instagram widget buttons */
+.instagram-card .eapps-instagram-feed-posts-grid-load-more {
+  width: fit-content !important;
+  min-width: 0 !important;
+  margin: 1rem auto 0 !important;
+  border-radius: 999px !important;
+  background-color: var(--uw-red) !important;
+  box-shadow: 0 12px 26px rgba(18, 18, 18, 0.12) !important;
+  transition:
+    background-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) var(--motion-ease) !important;
+}
+
+.instagram-card .eapps-instagram-feed-posts-grid-load-more:hover,
+.instagram-card .eapps-instagram-feed-posts-grid-load-more:focus-within {
+  background-color: var(--uw-red-dark) !important;
+  box-shadow: 0 16px 32px rgba(18, 18, 18, 0.16) !important;
+  transform: translateY(-1px);
+}
+
+.instagram-card .eapps-instagram-feed-posts-grid-load-more a,
+.instagram-card .eapps-instagram-feed-posts-grid-load-more button,
+.instagram-card .eapps-instagram-feed-posts-grid-load-more div {
+  background-color: transparent !important;
+  border-radius: 999px !important;
+}
+
 .eapps-instagram-feed-posts-grid-load-more-text,
 .eapps-instagram-feed-posts-grid-load-more-text-visible {
   color: #ffffff !important;
-  background-color: #0057b8 !important;
+  background-color: transparent !important;
+  border-radius: 999px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  padding: 0.78rem 1.2rem !important;
 }
 
 .eapps-instagram-feed-posts-grid-load-more-text:hover,
@@ -749,7 +814,7 @@
 .eapps-instagram-feed-posts-grid-load-more-text:focus,
 .eapps-instagram-feed-posts-grid-load-more-text-visible:focus {
   color: #ffffff !important;
-  background-color: #004a9c !important;
+  background-color: transparent !important;
 }
 
 .considering-hero-overlay {
@@ -1218,6 +1283,7 @@
   .community-table-wrap:hover,
   .saved-event-card:hover,
   .exchange-links-card:hover,
+  .instagram-card:hover,
   .considering-panel:hover,
   .considering-feature-card:hover,
   .considering-cta:hover,
@@ -1352,6 +1418,16 @@
   .newsletter-card {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .instagram-card {
+    padding: 0.75rem;
+    border-radius: 20px;
+  }
+
+  .instagram-feed-frame,
+  .instagram-feed {
+    min-height: 360px;
   }
 
   .home-hero,

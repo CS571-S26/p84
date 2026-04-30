@@ -35,6 +35,7 @@ function SiteLayout() {
       '.contact-draft-alert',
       '.contact-form-fallback',
       '.exchange-links-row',
+      '.instagram-card',
       '.considering-hero-banner',
       '.considering-panel',
       '.considering-feature-card',
